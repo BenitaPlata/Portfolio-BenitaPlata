@@ -1,3 +1,5 @@
+/*---RESET GENERAL---*/
+
 * {
     margin: 0;
     padding: 0;
@@ -34,3 +36,40 @@ header{
 }
 
 /* ----- MENÚ DE NAVEGACIÓN ----- */
+
+nav {
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ;
+
+}
+
+nav ul {
+    display:inline-block;
+    padding: 8px 18px;
+    gap: 80px;
+    text-decoration: none;
+    flex-wrap: wrap;
+    list-style: none;
+    font-weight: 600;
+    background-color: #d4c2cb;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 10px;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+nav li a:hover{
+    background-color: #bca9b6;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+}
+
+nav li a {
+    text-decoration: none;
+}
