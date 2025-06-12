@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---ESTILOS GENERALES----*/
+
+body{
+    background-color: #e9e0e7;
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/*---HEADER----*/
+
+header{
+    background-color:  #e9e0e7;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 50px;
+    vertical-align: middle;
+}
+
+.logo h1 {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+/* ----- MENÚ DE NAVEGACIÓN ----- */
