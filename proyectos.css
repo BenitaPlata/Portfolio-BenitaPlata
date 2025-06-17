@@ -1,127 +1,232 @@
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
+  
+  
 
-/*---ESTILOS GENERALES----*/
-
-body{
-    background-color: #e9e0e7;
-    color: #333;
-    font-family: Arial, sans-serif;
+  
+  /* VARIABLES */
+  :root {
+    --color-fondo: #e9e0e7;
+    --color-texto: #333;
+    --color-hover: #996699;
+    --borde-redondeado: 12px;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* ESTILO GENERAL */
+  body {
+    font-family: var(--fuente);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 1rem;
     line-height: 1.6;
-}
-
-/*---HEADER----*/
-
-header{
-    background-color:  #e9e0e7;
-    padding: 20px;
+  }
+  
+  /* HEADER */
+  header {
+    background-color: white;
+    padding: 1rem;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    box-shadow: var(--sombra);
+    margin-bottom: 2rem;
+    border-radius: var(--borde-redondeado);
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* MENÚ DE NAVEGACIÓN - igual que index */
+  
+/* ----- MENÚ DE NAVEGACIÓN ----- */
 
-.logo img {
-    width: 50px;
-    vertical-align: middle;
-}
-
-.logo h1 {
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 24px;
-}
-
-nav ul {
-    display:flex;
+nav {
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px 20px;
     gap: 80px;
     list-style: none;
     font-weight: 600;
-    background-color: #d4c2cb;
+    background-color:  #bca9b6;
     color: #333;
     padding: 10px 20px;
-
+  
     cursor: pointer;
     transition: background-color 0.3s ease;
-    
-}
-
-nav li a:hover{
-    background-color: #bca9b6;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-
-}
-
-nav li a {
-    text-decoration: none;
-    padding: 8px 15px;    /* Añadido para que tenga relleno y se vea mejor */
-    color: #333;          /* Para que el texto se vea */
-    display: block;       /* Para que el padding funcione bien */
-    border-radius: 6px;   /* Bordes redondeados */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-  /* Título principal de la sección */
-  .proyectos h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
   }
   
-  /* Párrafos del texto de introducción */
-  .proyectos p {
-    font-size: 1rem;
-    line-height: 1.6;
+  nav li a {
+      background-color: #bca9b6;
+      border: none;
+      color: white;
+      padding: 16px 28px;        /* Igual que los botones */
+      font-size: 1.1rem;         /* Igual que los botones */
+      border-radius: 8px;        /* Igual que los botones */
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      min-width: 120px;          /* Igual que los botones */
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+  nav li a:hover {
+    background-color:  #92156a;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* TÍTULO DE SECCIÓN */
+  .proyectos h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  /* PRIMER PÁRRAFO MÁS BONITO */
+  .proyectos p:first-of-type {
+    background-color: #fff;
+    border-radius: var(--borde-redondeado);
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    box-shadow: var(--sombra);
+  }
+  
+  /* GALERÍA DE PROYECTOS */
+  .galeria-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .proyecto {
+    background-color: white;
+    border-radius: var(--borde-redondeado);
+    padding: 1rem;
+    box-shadow: var(--sombra);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .proyecto:hover {
+    transform: translateY(-5px);
+  }
+  
+  .proyecto img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--borde-redondeado);
     margin-bottom: 1rem;
   }
   
-  /* Estilo para cada proyecto */
-  .proyecto {
-    background-color: #fff;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    margin-top: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Título del proyecto */
-  .proyecto h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Texto dentro del artículo del proyecto */
-  .proyecto p {
-    font-size: 1rem;
-  }
-  
-  /* Enlace al proyecto (si lo añades) */
-  .proyecto a {
-    display: inline-block;
-    margin-top: 0.8rem;
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Efecto hover en el enlace */
-  .proyecto a:hover {
-    background-color: #555;
-  }
-  
-  /* Footer */
+  /* PIE DE PÁGINA */
   footer {
+    margin-top: 3rem;
     text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
     font-size: 0.9rem;
+    color: #777;
+  }
+  
+
+  /* Móviles muy pequeños (menos de 360px) */
+@media (max-width: 359px) {
+    body {
+      padding: 0.5rem;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav ul {
+      gap: 40px;
+      padding: 10px;
+    }
+    nav li a {
+      padding: 12px 16px;
+      font-size: 1rem;
+      min-width: 90px;
+    }
+    .proyectos h2 {
+      font-size: 1.4rem;
+    }
+    .proyectos p:first-of-type {
+      font-size: 1rem;
+      padding: 0.8rem 1rem;
+      max-width: 90%;
+    }
+  }
+  
+  /* Móviles y tablets en orientación vertical (menos de 768px) */
+  @media (max-width: 767px) {
+    .galeria-proyectos {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      padding: 0 0.5rem;
+    }
+    .proyectos p:first-of-type {
+      max-width: 100%;
+    }
+    nav ul {
+      gap: 40px;
+    }
+    nav li a {
+      padding: 14px 20px;
+      font-size: 1rem;
+      min-width: 100px;
+    }
+  }
+  
+  /* Tablets y pantallas medianas (768px a 1024px) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    body {
+      padding: 1rem 3rem;
+    }
+    nav ul {
+      gap: 60px;
+    }
+    nav li a {
+      padding: 16px 24px;
+      font-size: 1.05rem;
+      min-width: 110px;
+    }
+    .galeria-proyectos {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+  }
+  
+  /* Escritorio grande (más de 1024px) */
+  @media (min-width: 1025px) {
+    body {
+      padding: 2rem 6rem;
+    }
+    nav ul {
+      gap: 80px;
+    }
+    nav li a {
+      padding: 16px 28px;
+      font-size: 1.1rem;
+      min-width: 120px;
+    }
+    .galeria-proyectos {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .proyectos p:first-of-type {
+      max-width: 700px;
+    }
   }
   

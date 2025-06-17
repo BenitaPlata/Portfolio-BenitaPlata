@@ -1,53 +1,59 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Proyectos - Benita Plata</title>
-    <link rel="stylesheet" href="proyectos.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Proyectos</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="conoceme.html">Conóceme</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="hablamos.html">¿Hablamos?</a></li>
-        </ul>
-      </nav>
-    </header>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyectos - Benita Plata</title>
+  <link rel="stylesheet" href="proyectos.css" />
+</head>
+<body>
+  <header>
+    <h1>Proyectos</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="conoceme.html">Conóceme</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="hablamos.html">¿Hablamos?</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="proyectos">
+      <h2>Mis proyectos</h2>
+      <p>Estos son algunos ejemplos de proyectos que me gustaría realizar o en los que estoy trabajando como práctica.</p>
 
-    <main>
-      <section class="proyectos">
-        <h2>Proyectos</h2>
-
-        <p>
-          Bienvenido a mi espacio de proyectos. Aquí iré compartiendo los
-          trabajos que voy realizando mientras avanzo en mi formación como
-          desarrolladora web.
-        </p>
-
-        <p>
-          Por ahora, te presento un primer proyecto de prueba que me ha servido
-          para poner en práctica lo aprendido en HTML y CSS.
-        </p>
-
-        <p>
-          Próximamente añadiré más proyectos reales a medida que los vaya
-          desarrollando, aplicando nuevas tecnologías y habilidades.
-        </p>
+      <div class="galeria-proyectos">
+        <article class="proyecto">
+          <img src="imágenes/miimagen.png" alt="Mi foto" />
+          <h3>Mi primer portfolio</h3>
+          <p>Diseño web sencillo en HTML y CSS para presentarme como desarrolladora junior.</p>
+        </article>
 
         <article class="proyecto">
-          <h3>Proyecto 1:</h3>
-          <p>Lenguajes usados: HTML, CSS</p>
+          <img src="imágenes/proyecto2.jpg" alt="Imagen ficticia del Proyecto 2" />
+          <h3>Landing Page</h3>
+          <p>Una página de presentación de producto ficticio con diseño responsive.</p>
         </article>
-      </section>
-    </main>
 
-    <footer>
-      <p>&copy; 2025 Benita Plata</p>
-    </footer>
-  </body>
+        <article class="proyecto">
+          <img src="imágenes/proyecto3.jpg" alt="Imagen ficticia del Proyecto 3" />
+          <h3>Mini blog</h3>
+          <p>Diseño de blog personal con secciones, artículos y estilo minimalista.</p>
+        </article>
+
+        <article class="proyecto">
+          <img src="imágenes/proyecto4.jpg" alt="Imagen ficticia del Proyecto 4" />
+          <h3>Galería de imágenes</h3>
+          <p>Galería básica con CSS Grid y efectos visuales.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Benita Plata</p>
+  </footer>
+</body>
 </html>

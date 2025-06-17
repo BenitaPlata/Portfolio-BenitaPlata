@@ -5,6 +5,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+/*---DEFINO MIS VARIABLES----*/
+:root {
+    --color-fondo: #e9e0e7;
+    --color-texto: #333333;
+    --color-primario: #92156a;
+    --color-secundario: #bca9b6;
+    --color-blanco: #ffffff;
+    --color-hover: #92156a;
+  
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    --sombra-suave: rgba(0, 0, 0, 0.05);
+    --sombra-media: rgba(0, 0, 0, 0.1);
+    --sombra-intensa: rgba(0, 0, 0, 0.2);
+  
+    --radio-bordes: 8px;
+    --radio-bordes-grande: 12px;
+  
+    --padding-general: 20px;
+    --padding-botones: 16px 28px;
+    --font-size-botones: 1.1rem;
+  }
+  
 
 /*---ESTILOS GENERALES----*/
 
@@ -74,20 +97,26 @@ nav ul {
   transition: background-color 0.3s ease;
 }
 
+nav li a {
+    background-color: #bca9b6;
+    border: none;
+    color: white;
+    padding: 16px 28px;        /* Igual que los botones */
+    font-size: 1.1rem;         /* Igual que los botones */
+    border-radius: 8px;        /* Igual que los botones */
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 120px;          /* Igual que los botones */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
 nav li a:hover {
   background-color:  #92156a;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-nav li a {
-  text-decoration: none;
-  padding: 8px 15px; /* Añadido para que tenga relleno y se vea mejor */
-  color: white; /* Para que el texto se vea */
-  display: block; /* Para que el padding funcione bien */
-  border-radius: 6px; /* Bordes redondeados */
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
 /* Contenedor main con flex para alinear las secciones */
 main {
@@ -159,7 +188,7 @@ main {
 
 #lenguajes {
   padding: 10px 20px;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 2rem auto;
   text-align: center;
 }
@@ -168,25 +197,26 @@ main {
   display: flex;
   justify-content: center; /* reparte los botones con espacio uniforme */
   flex-wrap: wrap; /* para que bajen a la siguiente línea en pantallas pequeñas */
-  gap: 30px;
+  gap: 40px 100px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
-
 .lista-lenguajes li button {
-   
-  background-color: #bca9b6;
-  border: none; 
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #bca9b6;
+    border: none;
+    color: white;
+    padding: 16px 28px;   /* Aumentamos el tamaño del botón */
+    font-size: 1.1rem;    /* Aumentamos el tamaño del texto */
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-width: 120px;     /* Opcional: para que todos tengan un tamaño mínimo más generoso */
+  }
+  
 
-  min-width: 100px; /* opcional, para que no sean muy pequeños */
-}
+
 
 .lista-lenguajes li button:hover {
   background-color: #92156a;
@@ -232,4 +262,86 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-bottom-color: transparent;
   }
+  
+
+  /* Móviles (pantallas pequeñas) */
+@media (max-width: 599px) {
+    /* El main se apila en columna */
+    main {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    /* Foto y presentación ocupan todo el ancho */
+    #foto, #presentacion {
+      flex: 1 1 100%;
+    }
+  
+    /* Menú de navegación apila vertical y con menos gap */
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    nav li a {
+      min-width: auto;
+      padding: 12px 20px;
+      font-size: 1rem;
+    }
+  
+    /* Lista de lenguajes se apila vertical */
+    .lista-lenguajes {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .lista-lenguajes li button {
+      width: 100%;
+      min-width: auto;
+    }
+  
+    /* Footer con padding más pequeño */
+    footer {
+      padding: 15px 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Tablets (pantallas medianas) */
+  @media (min-width: 600px) and (max-width: 899px) {
+    main {
+      padding: 1.5rem;
+      flex-wrap: nowrap; /* intenta que no baje en columnas */
+    }
+  
+    #foto {
+      flex: 1 1 40%;
+    }
+  
+    #presentacion {
+      flex: 2 1 55%;
+    }
+  
+    nav ul {
+      gap: 40px;
+      padding: 10px 15px;
+    }
+  
+    nav li a {
+      padding: 14px 24px;
+      font-size: 1.05rem;
+      min-width: 110px;
+    }
+  
+    .lista-lenguajes {
+      gap: 25px 60px;
+    }
+  
+    .lista-lenguajes li button {
+      min-width: 110px;
+    }
+  }
+  
+  /* Escritorio (pantallas grandes) ya las tienes base */
   
