@@ -35,19 +35,11 @@ header{
     font-size: 24px;
 }
 
-/* ----- MENÚ DE NAVEGACIÓN ----- */
-
-nav {
-    background-color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ;
-
-}
-
 nav ul {
-    display:inline-block;
-    padding: 8px 18px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 20px;
     gap: 80px;
     text-decoration: none;
     flex-wrap: wrap;
@@ -56,8 +48,7 @@ nav ul {
     background-color: #d4c2cb;
     color: #333;
     padding: 10px 20px;
-    border-radius: 10px;
-    justify-content: center;
+
     cursor: pointer;
     transition: background-color 0.3s ease;
     
@@ -72,4 +63,9 @@ nav li a:hover{
 
 nav li a {
     text-decoration: none;
+    padding: 8px 15px;    /* Añadido para que tenga relleno y se vea mejor */
+    color: #333;          /* Para que el texto se vea */
+    display: block;       /* Para que el padding funcione bien */
+    border-radius: 6px;   /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }

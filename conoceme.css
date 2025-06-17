@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---ESTILOS GENERALES----*/
+
+body{
+    background-color: #e9e0e7;
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/*---HEADER----*/
+
+header{
+    background-color:  #e9e0e7;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 50px;
+    vertical-align: middle;
+}
+
+.logo h1 {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 24px;
+}
+nav ul {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 80px;
+    list-style: none;
+    font-weight: 600;
+    background-color: #d4c2cb;
+    color: #333;
+    padding: 10px 20px;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+nav li a:hover{
+    background-color: #bca9b6;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 8px 15px;    /* Añadido para que tenga relleno y se vea mejor */
+    color: #333;          /* Para que el texto se vea */
+    display: block;       /* Para que el padding funcione bien */
+    border-radius: 6px;   /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
