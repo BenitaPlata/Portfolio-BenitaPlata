@@ -73,6 +73,8 @@ header {
   
 
 
+  
+
 
 /* ----- MENÚ DE NAVEGACIÓN ----- */
 
@@ -117,6 +119,60 @@ nav li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background-color: transparent;
+  }
+  
+  .contenedor-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .texto-hero {
+    flex: 1 1 500px;
+    background: linear-gradient(135deg, #ffffffcc, #f7f3f6cc);
+    padding: 2rem 2.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+    color: #92156a;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+  }
+  
+  .texto-hero:hover {
+    color: white;
+    background: #92156a;
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .foto-hero {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .foto-hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
 
 /* Contenedor main con flex para alinear las secciones */
 main {
@@ -344,4 +400,27 @@ footer {
   }
   
   /* Escritorio (pantallas grandes) ya las tienes base */
+
+  @media (max-width: 768px) {
+    .contenedor-hero {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .texto-hero {
+      text-align: justify;
+      padding: 1.5rem;
+    }
+  
+    .foto-hero {
+      margin-bottom: 1rem;
+    }
+  
+    .foto-hero img {
+      max-width: 250px;
+    }
+  }
+  
+  
   

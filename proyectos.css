@@ -16,6 +16,7 @@
     --borde-redondeado: 12px;
     --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
     --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
   }
   
   /* ESTILO GENERAL */
@@ -90,8 +91,10 @@ nav {
   /* TÍTULO DE SECCIÓN */
   .proyectos h2 {
     text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    color: var(--color-primario, #92156a);
+    margin-bottom: 2rem;
+    font-weight: 700;
   }
   
   /* PRIMER PÁRRAFO MÁS BONITO */
@@ -105,6 +108,7 @@ nav {
     max-width: 700px;
     margin: 0 auto 2rem auto;
     box-shadow: var(--sombra);
+    font-weight: 500;
   }
   
   /* GALERÍA DE PROYECTOS */
