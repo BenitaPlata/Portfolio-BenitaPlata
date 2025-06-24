@@ -5,29 +5,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /*---DEFINO MIS VARIABLES----*/
 :root {
-    --color-fondo: #e9e0e7;
-    --color-texto: #333333;
-    --color-primario: #92156a;
-    --color-secundario: #bca9b6;
-    --color-blanco: #ffffff;
-    --color-hover: #92156a;
-  
-    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
-    --sombra-suave: rgba(0, 0, 0, 0.05);
-    --sombra-media: rgba(0, 0, 0, 0.1);
-    --sombra-intensa: rgba(0, 0, 0, 0.2);
-  
-    --radio-bordes: 8px;
-    --radio-bordes-grande: 12px;
-  
-    --padding-general: 20px;
-    --padding-botones: 16px 28px;
-    --font-size-botones: 1.1rem;
-  }
-  
+  --color-fondo: #e9e0e7;
+  --color-texto: #333333;
+  --color-primario: #92156a;
+  --color-secundario: #bca9b6;
+  --color-blanco: #ffffff;
+  --color-hover: #92156a;
+
+  --fuente-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  --sombra-suave: rgba(0, 0, 0, 0.05);
+  --sombra-media: rgba(0, 0, 0, 0.1);
+  --sombra-intensa: rgba(0, 0, 0, 0.2);
+
+  --radio-bordes: 8px;
+  --radio-bordes-grande: 12px;
+
+  --padding-general: 20px;
+  --padding-botones: 16px 28px;
+  --font-size-botones: 1.1rem;
+}
 
 /*---ESTILOS GENERALES----*/
 
@@ -41,40 +41,35 @@ body {
 /*---HEADER----*/
 
 header {
-    background-color: white;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid #bca9b6; /* línea suave abajo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* sombra ligera */
-    border-radius: 0 0 12px 12px; /* bordes redondeados abajo */
-  }
-  
-  .logo img {
-    width: 50px;
-    vertical-align: middle;
-    border-radius: 8px; /* bordes redondeados para suavizar */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* sombra ligera */
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .logo img:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* sombra más intensa al pasar el ratón */
-  }
-  
-  .logo h1 {
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 24px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #92156a; /* un toque del color morado de la paleta */
-    font-weight: 600;
-    user-select: none;
-  }
-  
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #bca9b6; /* línea suave abajo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* sombra ligera */
+  border-radius: 0 0 12px 12px; /* bordes redondeados abajo */
+}
 
+.logo img {
+  width: 50px;
+  vertical-align: middle;
+  border-radius: 8px; /* bordes redondeados para suavizar */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* sombra ligera */
+  transition: box-shadow 0.3s ease;
+}
 
-  
+.logo img:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* sombra más intensa al pasar el ratón */
+}
 
+.logo h1 {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #92156a; /* un toque del color morado de la paleta */
+  font-weight: 600;
+  user-select: none;
+}
 
 /* ----- MENÚ DE NAVEGACIÓN ----- */
 
@@ -91,7 +86,7 @@ nav ul {
   gap: 80px;
   list-style: none;
   font-weight: 600;
-  background-color:  #bca9b6;
+  background-color: #bca9b6;
   color: #333;
   padding: 10px 20px;
 
@@ -100,79 +95,77 @@ nav ul {
 }
 
 nav li a {
-    background-color: #bca9b6;
-    border: none;
-    color: white;
-    padding: 16px 28px;        /* Igual que los botones */
-    font-size: 1.1rem;         /* Igual que los botones */
-    border-radius: 8px;        /* Igual que los botones */
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    min-width: 120px;          /* Igual que los botones */
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
+  background-color: #bca9b6;
+  border: none;
+  color: white;
+  padding: 16px 28px; /* Igual que los botones */
+  font-size: 1.1rem; /* Igual que los botones */
+  border-radius: 8px; /* Igual que los botones */
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 120px; /* Igual que los botones */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
 nav li a:hover {
-  background-color:  #92156a;
+  background-color: #92156a;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
 .hero {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 2rem 1rem;
-    background-color: transparent;
-  }
-  
-  .contenedor-hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1100px;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .texto-hero {
-    flex: 1 1 500px;
-    background: linear-gradient(135deg, #ffffffcc, #f7f3f6cc);
-    padding: 2rem 2.5rem;
-    border-radius: 1.2rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-    color: #92156a;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    font-weight: bold;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #ddd;
-  }
-  
-  .texto-hero:hover {
-    color: white;
-    background: #92156a;
-    transform: translateY(-6px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.1);
-  }
-  
-  .foto-hero {
-    flex: 1 1 300px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .foto-hero img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: transparent;
+}
+
+.contenedor-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.texto-hero {
+  flex: 1 1 500px;
+  background: linear-gradient(135deg, #ffffffcc, #f7f3f6cc);
+  padding: 2rem 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  color: #92156a;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+.texto-hero:hover {
+  color: white;
+  background: #92156a;
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.foto-hero {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.foto-hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
 /* Contenedor main con flex para alinear las secciones */
 main {
@@ -197,7 +190,6 @@ main {
   max-width: 100%;
   height: auto;
   border-radius: 1rem;
-
 }
 
 .fila-superior {
@@ -227,7 +219,7 @@ main {
   font-weight: bold;
 }
 
-/* Efecto hover para dar dinamismo */
+/* Efecto hover  */
 #presentacion:hover {
   color: white;
   transform: translateY(-6px);
@@ -259,20 +251,17 @@ main {
   list-style: none;
 }
 .lista-lenguajes li button {
-    background-color: #bca9b6;
-    border: none;
-    color: white;
-    padding: 16px 28px;   /* Aumentamos el tamaño del botón */
-    font-size: 1.1rem;    /* Aumentamos el tamaño del texto */
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    min-width: 120px;     /* Opcional: para que todos tengan un tamaño mínimo más generoso */
-  }
-  
-
-
+  background-color: #bca9b6;
+  border: none;
+  color: white;
+  padding: 16px 28px; /* Aumentamos el tamaño del botón */
+  font-size: 1.1rem; /* Aumentamos el tamaño del texto */
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 120px; /* Opcional: para que todos tengan un tamaño mínimo más generoso */
+}
 
 .lista-lenguajes li button:hover {
   background-color: #92156a;
@@ -281,146 +270,141 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
 footer {
-    background-color: #bca9b6;   /* mismo color que la barra de navegación */
-    color: #92156a;  
-                  /* texto oscuro para buen contraste */
-    text-align: center;
-    padding: 20px 15px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    border-top: 1px solid #bca9b6; /* línea sutil arriba para separar */
-    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 12px 12px 0 0; /* bordes redondeados arriba */
-  }
-  
-  footer p {
-    margin: 6px 0;
-  }
-  
-  footer a {
+  background-color: #bca9b6; /* mismo color que la barra de navegación */
+  color: #92156a;
+  /* texto oscuro para buen contraste */
+  text-align: center;
+  padding: 20px 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  border-top: 1px solid #bca9b6; /* línea sutil arriba para separar */
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px 12px 0 0; /* bordes redondeados arriba */
+}
 
-    color: white;
-    
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    padding: 10px 20px; /* más espacio interno */
-    border-radius: 8px;
-    display: inline-block;
-  }
-  
-  footer a:hover {
-    background-color: #92156a;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-bottom-color: transparent;
-  }
-  
+footer p {
+  margin: 6px 0;
+}
 
-  /* Móviles (pantallas pequeñas) */
+footer a {
+  color: white;
+
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 20px; /* más espacio interno */
+  border-radius: 8px;
+  display: inline-block;
+}
+
+footer a:hover {
+  background-color: #92156a;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-bottom-color: transparent;
+}
+
+/* Móviles (pantallas pequeñas) */
 @media (max-width: 599px) {
-    /* El main se apila en columna */
-    main {
-      flex-direction: column;
-      padding: 1rem;
-    }
-  
-    /* Foto y presentación ocupan todo el ancho */
-    #foto, #presentacion {
-      flex: 1 1 100%;
-    }
-  
-    /* Menú de navegación apila vertical y con menos gap */
-    nav ul {
-      flex-direction: column;
-      gap: 10px;
-      padding: 10px;
-    }
-  
-    nav li a {
-      min-width: auto;
-      padding: 12px 20px;
-      font-size: 1rem;
-    }
-  
-    /* Lista de lenguajes se apila vertical */
-    .lista-lenguajes {
-      flex-direction: column;
-      gap: 15px;
-    }
-  
-    .lista-lenguajes li button {
-      width: 100%;
-      min-width: auto;
-    }
-  
-    /* Footer con padding más pequeño */
-    footer {
-      padding: 15px 10px;
-      font-size: 0.9rem;
-    }
+  /* El main se apila en columna */
+  main {
+    flex-direction: column;
+    padding: 1rem;
   }
-  
-  /* Tablets (pantallas medianas) */
-  @media (min-width: 600px) and (max-width: 899px) {
-    main {
-      padding: 1.5rem;
-      flex-wrap: nowrap; /* intenta que no baje en columnas */
-    }
-  
-    #foto {
-      flex: 1 1 40%;
-    }
-  
-    #presentacion {
-      flex: 2 1 55%;
-    }
-  
-    nav ul {
-      gap: 40px;
-      padding: 10px 15px;
-    }
-  
-    nav li a {
-      padding: 14px 24px;
-      font-size: 1.05rem;
-      min-width: 110px;
-    }
-  
-    .lista-lenguajes {
-      gap: 25px 60px;
-    }
-  
-    .lista-lenguajes li button {
-      min-width: 110px;
-    }
-  }
-  
-  /* Escritorio (pantallas grandes) ya las tienes base */
 
-  @media (max-width: 768px) {
-    .contenedor-hero {
-      flex-direction: column-reverse;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .texto-hero {
-      text-align: justify;
-      padding: 1.5rem;
-    }
-  
-    .foto-hero {
-      margin-bottom: 1rem;
-    }
-  
-    .foto-hero img {
-      max-width: 250px;
-    }
+  /* Foto y presentación ocupan todo el ancho */
+  #foto,
+  #presentacion {
+    flex: 1 1 100%;
   }
-  
-  
-  
+
+  /* Menú de navegación apila vertical y con menos gap */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav li a {
+    min-width: auto;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  /* Lista de lenguajes se apila vertical */
+  .lista-lenguajes {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .lista-lenguajes li button {
+    width: 100%;
+    min-width: auto;
+  }
+
+  /* Footer con padding más pequeño */
+  footer {
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets (pantallas medianas) */
+@media (min-width: 600px) and (max-width: 899px) {
+  main {
+    padding: 1.5rem;
+    flex-wrap: nowrap;
+  }
+
+  #foto {
+    flex: 1 1 40%;
+  }
+
+  #presentacion {
+    flex: 2 1 55%;
+  }
+
+  nav ul {
+    gap: 40px;
+    padding: 10px 15px;
+  }
+
+  nav li a {
+    padding: 14px 24px;
+    font-size: 1.05rem;
+    min-width: 110px;
+  }
+
+  .lista-lenguajes {
+    gap: 25px 60px;
+  }
+
+  .lista-lenguajes li button {
+    min-width: 110px;
+  }
+}
+
+/* Escritorio (pantallas grandes) */
+
+@media (max-width: 768px) {
+  .contenedor-hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .texto-hero {
+    text-align: justify;
+    padding: 1.5rem;
+  }
+
+  .foto-hero {
+    margin-bottom: 1rem;
+  }
+
+  .foto-hero img {
+    max-width: 250px;
+  }
+}
