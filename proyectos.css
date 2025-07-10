@@ -133,13 +133,15 @@ nav {
     transform: translateY(-5px);
   }
   
-  .proyecto img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--borde-redondeado);
-    margin-bottom: 1rem;
-  }
-  
+.proyecto img {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--borde-redondeado);
+  margin-bottom: 1rem;
+}
+
   /* PIE DE PÁGINA */
   footer {
     margin-top: 3rem;
