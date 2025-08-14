@@ -13,6 +13,8 @@
   --borde-redondeado: 12px;
   --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
   --fuente: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --color-primario: #92156a;
+  --color-secundario: #f0d9e7;
 }
 
 /* ESTILO GENERAL */
@@ -37,13 +39,10 @@ header {
 header h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #92156a;
+  color: var(--color-primario);
 }
 
-/* MENÚ DE NAVEGACIÓN - igual que index */
-
 /* ----- MENÚ DE NAVEGACIÓN ----- */
-
 nav {
   padding: 10px 0;
   text-align: center;
@@ -58,33 +57,29 @@ nav ul {
   list-style: none;
   font-weight: 600;
   background-color: #bca9b6;
-  color: #333;
-  padding: 10px 20px;
-
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 nav li a {
   background-color: #bca9b6;
   border: none;
   color: white;
-  padding: 16px 28px; /* Igual que los botones */
-  font-size: 1.1rem; /* Igual que los botones */
-  border-radius: 8px; /* Igual que los botones */
+  padding: 16px 28px;
+  font-size: 1.1rem;
+  border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  min-width: 120px; /* Igual que los botones */
+  min-width: 120px;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav li a:hover {
-  background-color: #92156a;
+  background-color: var(--color-primario);
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* SECCIÓN CONÓCEME */
 .conoceme {
   max-width: 900px;
   margin: 3rem auto;
@@ -92,10 +87,7 @@ nav li a:hover {
   background: linear-gradient(135deg, #f8f5f8cc, #eae0e7cc);
   border-radius: var(--borde-redondeado);
   box-shadow: var(--sombra);
-  font-family: var(--fuente);
   color: var(--color-texto);
-  
-
 }
 
 .contenido-conoceme {
@@ -104,26 +96,22 @@ nav li a:hover {
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  
 }
 
 .texto {
   flex: 1 1 320px;
   font-size: 1.15rem;
   line-height: 1.6;
-  color: var(--color-texto);
-  
 }
 
 .texto p {
   margin-bottom: 1.2rem;
   text-align: justify;
   font-weight: 500;
-  
 }
 
 .texto strong {
-  color: var(--color-primario, #92156a);
+  color: var(--color-primario);
 }
 
 .foto-conoceme {
@@ -145,8 +133,7 @@ nav li a:hover {
   box-shadow: 0 8px 16px rgba(146, 21, 106, 0.4);
 }
 
-/* Media queries para móviles */
-
+/* Responsive para móviles */
 @media (max-width: 650px) {
   .contenido-conoceme {
     flex-direction: column;
@@ -172,10 +159,9 @@ nav li a:hover {
 }
 
 .timeline h3 {
-  color: var(--color-primario);
   margin-bottom: 1rem;
-  color: #92156a;
   font-size: 1.5rem;
+  color: var(--color-primario);
 }
 
 .timeline ul {
@@ -191,9 +177,7 @@ nav li a:hover {
   padding-left: 1.5rem;
 }
 
-
-
-/* Habilidades */
+/* HABILIDADES */
 .habilidades {
   margin-top: 3rem;
   background: #fff;
@@ -204,14 +188,14 @@ nav li a:hover {
 }
 
 .habilidades h3 {
-  color: var(--color-primario);
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  color: #92156a;
+  color: var(--color-primario);
 }
 
 .habilidades h4 {
   margin-top: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--color-texto);
   font-size: 1.2rem;
   border-bottom: 2px solid var(--color-primario);
@@ -235,14 +219,15 @@ nav li a:hover {
   padding: 0.6rem 1rem;
   border-radius: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  min-width: 100px;
+  min-width: 120px;
   text-align: center;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   cursor: default;
 }
 
 .habilidades ul li:hover {
   background-color: var(--color-primario);
+  color: white;
   box-shadow: 0 4px 10px rgba(146, 21, 106, 0.3);
 }
 
