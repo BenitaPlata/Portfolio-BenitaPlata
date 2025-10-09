@@ -142,6 +142,19 @@ nav {
   margin-bottom: 1rem;
 }
 
+/* ENLACES DE TARJETAS DE PROYECTO */
+.proyecto-link {
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit;        /* Mantiene el color del texto de la tarjeta */
+  display: block;        /* Hace que el enlace abarque todo el artículo */
+}
+
+/* Efecto hover opcional para la tarjeta */
+.proyecto-link:hover .proyecto {
+  transform: translateY(-5px);
+}
+
+
   /* PIE DE PÁGINA */
   footer {
     margin-top: 3rem;
