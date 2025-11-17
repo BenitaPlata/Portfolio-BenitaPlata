@@ -18,22 +18,24 @@ export default async function handler(req, res) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL_USER, // tu correo, usando variable de entorno
-      pass: process.env.EMAIL_PASS, // tu App Password, usando variable de entorno
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   const mailOptions = {
     from: `"Portfolio de ${nombre}" <${process.env.EMAIL_USER}>`,
     replyTo: email,
-
     to: process.env.EMAIL_USER,
     subject: "Nuevo mensaje desde tu portfolio",
     text: `Nombre: ${nombre}\nEmail: ${email}\nMensaje:\n${mensaje}`,
   };
 
+  console.log("Intentando enviar correo a:", process.env.EMAIL_USER);
+
   try {
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Correo enviado:", info.response);
     res
       .status(200)
       .json({ status: "ok", message: "Correo enviado correctamente" });
