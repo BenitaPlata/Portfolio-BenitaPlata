@@ -1,12 +1,11 @@
 /*---RESET GENERAL---*/
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*---DEFINO MIS VARIABLES----*/
+/*---VARIABLES---*/
 :root {
   --color-fondo: #e9e0e7;
   --color-texto: #333333;
@@ -29,50 +28,46 @@
   --font-size-botones: 1.1rem;
 }
 
-/*---ESTILOS GENERALES----*/
-
+/*---ESTILOS GENERALES---*/
 body {
-  background-color: #e9e0e7;
-  color: #333;
-  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-principal);
   line-height: 1.6;
+  padding: var(--padding-general);
 }
 
-/*---HEADER----*/
-
+/*---HEADER---*/
 header {
-  background-color: white;
+  background-color: var(--color-blanco);
   padding: 20px;
   text-align: center;
-  border-bottom: 2px solid #bca9b6; /* línea suave abajo */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* sombra ligera */
-  border-radius: 0 0 12px 12px; /* bordes redondeados abajo */
+  border-bottom: 2px solid var(--color-secundario);
+  box-shadow: 0 2px 5px var(--sombra-suave);
+  border-radius: 0 0 var(--radio-bordes-grande) var(--radio-bordes-grande);
 }
 
 .logo img {
   width: 50px;
   vertical-align: middle;
-  border-radius: 8px; /* bordes redondeados para suavizar */
-  box-shadow: none; /* sombra ligera */
+  border-radius: 8px;
   transition: box-shadow 0.3s ease;
 }
 
 .logo img:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* sombra más intensa al pasar el ratón */
+  box-shadow: 0 6px 12px var(--sombra-intensa);
 }
 
 .logo h1 {
   display: inline-block;
   margin-left: 10px;
   font-size: 24px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #92156a; /* un toque del color morado de la paleta */
+  color: var(--color-primario);
   font-weight: 600;
   user-select: none;
 }
 
-/* ----- MENÚ DE NAVEGACIÓN ----- */
-
+/*---MENÚ DE NAVEGACIÓN---*/
 nav {
   padding: 10px 0;
   text-align: center;
@@ -82,44 +77,38 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 10px 20px;
   gap: 80px;
   list-style: none;
   font-weight: 600;
-  background-color: #bca9b6;
-  color: #333;
+  background-color: var(--color-secundario);
   padding: 10px 20px;
-
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 nav li a {
-  background-color: #bca9b6;
-  border: none;
+  background-color: var(--color-secundario);
   color: white;
-  padding: 16px 28px; /* Igual que los botones */
-  font-size: 1.1rem; /* Igual que los botones */
-  border-radius: 8px; /* Igual que los botones */
+  padding: var(--padding-botones);
+  font-size: var(--font-size-botones);
+  border-radius: var(--radio-bordes);
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  min-width: 120px; /* Igual que los botones */
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 120px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav li a:hover {
-  background-color: #92156a;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-primario);
+  box-shadow: 0 4px 8px var(--sombra-intensa);
 }
 
+/*---HERO---*/
 .hero {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 2rem 1rem;
-  background-color: transparent;
 }
 
 .contenedor-hero {
@@ -137,9 +126,8 @@ nav li a:hover {
   background: linear-gradient(135deg, #ffffffcc, #f7f3f6cc);
   padding: 2rem 2.5rem;
   border-radius: 1.2rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-  color: #92156a;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 16px var(--sombra-media), 0 4px 8px var(--sombra-suave);
+  color: var(--color-primario);
   font-size: 1.15rem;
   line-height: 1.7;
   font-weight: bold;
@@ -148,10 +136,10 @@ nav li a:hover {
 }
 
 .texto-hero:hover {
-  color: white;
-  background: #92156a;
+  color: var(--color-blanco);
+  background: var(--color-primario);
   transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 32px var(--sombra-intensa), 0 8px 16px var(--sombra-media);
 }
 
 .foto-hero {
@@ -163,36 +151,12 @@ nav li a:hover {
 .foto-hero img {
   max-width: 100%;
   height: auto;
-    object-fit: contain;
+  object-fit: contain;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px var(--sombra-media);
 }
 
-/* Contenedor main con flex para alinear las secciones */
-main {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  padding: 2rem;
-  flex-wrap: wrap; /* para que en pantallas pequeñas bajen a columna */
-}
-
-/* Sección foto */
-#foto {
-  flex: 1 1 300px; /* flexible, mínimo 300px */
-  display: flex;
-  justify-content: center;
-  background-color: transparent !important;
-}
-
-.mi-foto {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  max-width: 430px;
-  height: auto;
-  border-radius: 1rem;
-}
-
+/*---FILA SUPERIOR---*/
 .fila-superior {
   display: flex;
   gap: 2rem;
@@ -200,41 +164,46 @@ main {
   flex-wrap: wrap;
 }
 
-/* Sección presentación con estilo de tarjeta */
+#foto {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.mi-foto {
+  max-width: 430px;
+  height: auto;
+  border-radius: 1rem;
+}
+
 #presentacion {
   flex: 2 1 400px;
-  background: linear-gradient(
-    135deg,
-    #ffffffcc,
-    #f7f3f6cc
-  ); /* degradado sutil */
+  background: linear-gradient(135deg, #ffffffcc, #f7f3f6cc);
   padding: 2rem 2.5rem;
   border-radius: 1.2rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-  color: #92156a;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 16px var(--sombra-media), 0 4px 8px var(--sombra-suave);
+  color: var(--color-primario);
   font-size: 1.15rem;
   line-height: 1.7;
+  font-weight: bold;
   border: 1px solid #ddd;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-weight: bold;
 }
 
-/* Efecto hover  */
 #presentacion:hover {
-  color: white;
+  color: var(--color-blanco);
   transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.1);
-  background: #92156a;
+  background: var(--color-primario);
+  box-shadow: 0 16px 32px var(--sombra-intensa), 0 8px 16px var(--sombra-media);
 }
 
-/* Opcional: mejora el texto de párrafos dentro */
 #presentacion p {
   margin-bottom: 1.2rem;
   text-align: justify;
   letter-spacing: 0.02em;
 }
 
+/*---SECCIÓN LENGUAJES---*/
 #lenguajes {
   padding: 10px 20px;
   max-width: 1200px;
@@ -244,44 +213,42 @@ main {
 
 .lista-lenguajes {
   display: flex;
-  justify-content: center; /* reparte los botones con espacio uniforme */
-  flex-wrap: wrap; /* para que bajen a la siguiente línea en pantallas pequeñas */
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 40px 100px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 .lista-lenguajes li button {
-  background-color: #bca9b6;
+  background-color: var(--color-secundario);
   border: none;
   color: white;
-  padding: 16px 28px; /* Aumentamos el tamaño del botón */
-  font-size: 1.1rem; /* Aumentamos el tamaño del texto */
-  border-radius: 8px;
+  padding: var(--padding-botones);
+  font-size: var(--font-size-botones);
+  border-radius: var(--radio-bordes);
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  min-width: 120px; /* Opcional: para que todos tengan un tamaño mínimo más generoso */
+  min-width: 120px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .lista-lenguajes li button:hover {
-  background-color: #92156a;
-
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-primario);
+  box-shadow: 0 4px 8px var(--sombra-intensa);
 }
 
+/*---FOOTER---*/
 footer {
-  background-color: #bca9b6; /* mismo color que la barra de navegación */
-  color: #92156a;
-  /* texto oscuro para buen contraste */
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
   text-align: center;
   padding: 20px 15px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
-  border-top: 1px solid #bca9b6; /* línea sutil arriba para separar */
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 12px 12px 0 0; /* bordes redondeados arriba */
+  border-top: 1px solid var(--color-secundario);
+  box-shadow: 0 -2px 6px var(--sombra-suave);
+  border-radius: var(--radio-bordes-grande) var(--radio-bordes-grande) 0 0;
 }
 
 footer p {
@@ -290,38 +257,45 @@ footer p {
 
 footer a {
   color: white;
-
   text-decoration: none;
   margin: 0 10px;
   font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  padding: 10px 20px; /* más espacio interno */
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radio-bordes);
   display: inline-block;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 footer a:hover {
-  background-color: #92156a;
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-bottom-color: transparent;
+  background-color: var(--color-primario);
+  box-shadow: 0 4px 8px var(--sombra-intensa);
 }
 
-/* Móviles (pantallas pequeñas) */
+/*---MEDIA QUERIES---*/
+
+/* Móviles (<600px) */
 @media (max-width: 599px) {
-  /* El main se apila en columna */
   main {
     flex-direction: column;
     padding: 1rem;
   }
 
-  /* Foto y presentación ocupan todo el ancho */
-  #foto,
-  #presentacion {
+  #foto, #presentacion, .foto-hero, .texto-hero {
     flex: 1 1 100%;
   }
 
-  /* Menú de navegación apila vertical y con menos gap */
+  .contenedor-hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+  }
+
+  .foto-hero img, .mi-foto {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
   nav ul {
     flex-direction: column;
     gap: 10px;
@@ -334,7 +308,6 @@ footer a:hover {
     font-size: 1rem;
   }
 
-  /* Lista de lenguajes se apila vertical */
   .lista-lenguajes {
     flex-direction: column;
     gap: 15px;
@@ -344,19 +317,18 @@ footer a:hover {
     width: 100%;
     min-width: auto;
   }
-s
-  /* Footer con padding más pequeño */
+
   footer {
     padding: 15px 10px;
     font-size: 0.9rem;
   }
 }
 
-/* Tablets (pantallas medianas) */
+/* Tablets (600px - 899px) */
 @media (min-width: 600px) and (max-width: 899px) {
   main {
     padding: 1.5rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   #foto {
@@ -387,46 +359,21 @@ s
   }
 }
 
-/* Escritorio (pantallas grandes) */
+/* Escritorio (>=900px) */
+@media (min-width: 900px) {
+  main {
+    padding: 2rem;
+  }
 
-@media (max-width: 768px) {
   .contenedor-hero {
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
   }
 
-  .texto-hero {
-    text-align: justify;
-    padding: 1.5rem;
+  #foto {
+    flex: 1 1 35%;
   }
 
-  .foto-hero {
-    margin-bottom: 1rem;
-  }
-
-  .foto-hero img {
-    max-width: 250px;
+  #presentacion {
+    flex: 2 1 60%;
   }
 }
-
-/* Ajustes finos para que la foto NO rompa el responsive */
-@media (max-width: 599px) {
-
-  #foto,
-  .foto-hero {
-    flex: 1 1 100% !important;
-  }
-
-  .mi-foto,
-  .foto-hero img {
-    max-width: 100% !important;
-    height: auto !important;
-    object-fit: contain;
-  }
-
-  .texto-hero {
-    flex: 1 1 100% !important;
-  }
-}
-
