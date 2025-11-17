@@ -1,72 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- METADATOS -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>¿Hablamos? - Benita Plata</title>
-    <link rel="stylesheet" href="hablamos.css" />
-  </head>
-  <body>
-    <!-- CABECERA Y MENÚ DE NAVEGACIÓN -->
-    <header>
-      <h1>¿Hablamos?</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="conoceme.html">Conóceme</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="hablamos.html">¿Hablamos?</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>¿Hablamos? - Benita Plata</title>
+  <link rel="stylesheet" href="hablamos.css" />
+  <style>
+    /* ANIMACIÓN PARA MENSAJE DE ÉXITO */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-    <!-- CONTENIDO PRINCIPAL -->
+    #successMessage {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <!-- CABECERA Y MENÚ DE NAVEGACIÓN -->
+  <header>
+    <h1>¿Hablamos?</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="conoceme.html">Conóceme</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="hablamos.html">¿Hablamos?</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-      <!-- SECCIÓN DE CONTACTO CON FORMULARIO -->
-      <section class="contacto">
-        <h2>Contacto</h2>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <section class="contacto">
+      <h2>Contacto</h2>
+      <form id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
 
-        <!-- FORMULARIO DE CONTACTO -->
-        <form action="#" method="post">
-          <!-- CAMPO: NOMBRE -->
-          <label for="nombre">Nombre:</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Tu nombre"
-            autocomplete="name"
-            required
-          />
-          <!-- CAMPO: CORREO ELECTRÓNICO -->
-          <label for="email">Correo electrónico:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="tu@email.com"
-            autocomplete="email"
-            required
-          />
-          <!-- CAMPO: MENSAJE -->
-          <label for="mensaje">Mensaje: </label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows="4"
-            placeholder="Escribe tu mensaje aquí..."
-            required
-          ></textarea>
-          <!-- BOTÓN DE ENVÍO -->
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
-    </main>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
 
-    <footer>
-      <p>&copy; 2025 Benita Plata</p>
-    </footer>
-  </body>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+        <button type="submit">Enviar</button>
+
+        <p id="successMessage" style="display:none; color:#92156a; font-weight:bold; margin-top:10px; text-align:center;">
+          ¡Mensaje enviado! 😊 Gracias por contactarme.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Benita Plata</p>
+  </footer>
+
+  <!-- SCRIPT PARA ENVÍO DEL FORMULARIO -->
+  <script>
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault(); // evita recarga de página
+
+      const data = {
+        nombre: form.nombre.value,
+        email: form.email.value,
+        mensaje: form.mensaje.value
+      };
+
+      try {
+        const res = await fetch("http://localhost:3000/send", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+          // Mostrar mensaje con animación
+          successMessage.style.display = "block";
+          successMessage.style.opacity = "0";
+          successMessage.style.animation = "fadeIn 0.5s forwards";
+
+          form.reset();
+
+          // Desaparece después de 4 segundos
+          setTimeout(() => {
+            successMessage.style.opacity = "0";
+            setTimeout(() => {
+              successMessage.style.display = "none";
+            }, 500);
+          }, 4000);
+
+        } else {
+          alert("Error al enviar el mensaje, prueba más tarde.");
+        }
+      } catch (err) {
+        alert("No se pudo conectar con el servidor.");
+        console.error(err);
+      }
+    });
+  </script>
+</body>
 </html>

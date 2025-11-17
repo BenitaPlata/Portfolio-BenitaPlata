@@ -154,6 +154,18 @@ footer {
   color: #777;
 }
 
+/* ANIMACIÓN PARA MENSAJE DE ÉXITO */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#successMessage {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
   nav ul {
