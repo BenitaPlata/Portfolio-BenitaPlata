@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>¿Hablamos? - Benita Plata</title>
   <link rel="stylesheet" href="hablamos.css" />
+
   <style>
     /* ANIMACIÓN PARA MENSAJE DE ÉXITO */
     @keyframes fadeIn {
@@ -18,6 +19,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- CABECERA Y MENÚ DE NAVEGACIÓN -->
   <header>
@@ -36,19 +38,50 @@
   <main>
     <section class="contacto">
       <h2>Contacto</h2>
+
       <form id="contactForm">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required />
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Tu nombre"
+          autocomplete="name"
+          required
+        />
 
         <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="tu@email.com"
+          autocomplete="email"
+          required
+        />
 
         <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          placeholder="Escribe tu mensaje aquí..."
+          required
+        ></textarea>
 
         <button type="submit">Enviar</button>
 
-        <p id="successMessage" style="display:none; color:#92156a; font-weight:bold; margin-top:10px; text-align:center;">
+        <!-- MENSAJE DE ÉXITO -->
+        <p
+          id="successMessage"
+          style="
+            display: none;
+            color: #92156a;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+          "
+        >
           ¡Mensaje enviado! 😊 Gracias por contactarme.
         </p>
       </form>
@@ -59,51 +92,7 @@
     <p>&copy; 2025 Benita Plata</p>
   </footer>
 
-  <!-- SCRIPT PARA ENVÍO DEL FORMULARIO -->
-  <script>
-    const form = document.getElementById("contactForm");
-    const successMessage = document.getElementById("successMessage");
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault(); // evita recarga de página
-
-      const data = {
-        nombre: form.nombre.value,
-        email: form.email.value,
-        mensaje: form.mensaje.value
-      };
-
-      try {
-        const res = await fetch("http://localhost:3000/send", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
-        });
-
-        if (res.ok) {
-          // Mostrar mensaje con animación
-          successMessage.style.display = "block";
-          successMessage.style.opacity = "0";
-          successMessage.style.animation = "fadeIn 0.5s forwards";
-
-          form.reset();
-
-          // Desaparece después de 4 segundos
-          setTimeout(() => {
-            successMessage.style.opacity = "0";
-            setTimeout(() => {
-              successMessage.style.display = "none";
-            }, 500);
-          }, 4000);
-
-        } else {
-          alert("Error al enviar el mensaje, prueba más tarde.");
-        }
-      } catch (err) {
-        alert("No se pudo conectar con el servidor.");
-        console.error(err);
-      }
-    });
-  </script>
+  <!-- SCRIPT EXTERNO -->
+  <script src="hablamos.js"></script>
 </body>
 </html>
