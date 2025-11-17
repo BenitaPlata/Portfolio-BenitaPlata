@@ -53,7 +53,7 @@ header {
   width: 50px;
   vertical-align: middle;
   border-radius: 8px; /* bordes redondeados para suavizar */
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* sombra ligera */
+  box-shadow: none; /* sombra ligera */
   transition: box-shadow 0.3s ease;
 }
 
@@ -133,7 +133,7 @@ nav li a:hover {
 }
 
 .texto-hero {
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   background: linear-gradient(135deg, #ffffffcc, #f7f3f6cc);
   padding: 2rem 2.5rem;
   border-radius: 1.2rem;
@@ -163,6 +163,7 @@ nav li a:hover {
 .foto-hero img {
   max-width: 100%;
   height: auto;
+    object-fit: contain;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -343,7 +344,7 @@ footer a:hover {
     width: 100%;
     min-width: auto;
   }
-
+s
   /* Footer con padding más pequeño */
   footer {
     padding: 15px 10px;
@@ -408,3 +409,24 @@ footer a:hover {
     max-width: 250px;
   }
 }
+
+/* Ajustes finos para que la foto NO rompa el responsive */
+@media (max-width: 599px) {
+
+  #foto,
+  .foto-hero {
+    flex: 1 1 100% !important;
+  }
+
+  .mi-foto,
+  .foto-hero img {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain;
+  }
+
+  .texto-hero {
+    flex: 1 1 100% !important;
+  }
+}
+
