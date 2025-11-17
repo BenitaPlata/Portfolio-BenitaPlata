@@ -34,7 +34,6 @@ body {
   color: var(--color-texto);
   font-family: var(--fuente-principal);
   line-height: 1.6;
-  padding: var(--padding-general);
 }
 
 /*---HEADER---*/
@@ -50,7 +49,7 @@ header {
 .logo img {
   width: 50px;
   vertical-align: middle;
-  border-radius: 8px;
+  border-radius: var(--radio-bordes);
   transition: box-shadow 0.3s ease;
 }
 
@@ -77,17 +76,16 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 80px;
+  gap: 40px;
   list-style: none;
   font-weight: 600;
   background-color: var(--color-secundario);
   padding: 10px 20px;
-  cursor: pointer;
 }
 
 nav li a {
   background-color: var(--color-secundario);
-  color: white;
+  color: var(--color-blanco);
   padding: var(--padding-botones);
   font-size: var(--font-size-botones);
   border-radius: var(--radio-bordes);
@@ -126,12 +124,12 @@ nav li a:hover {
   background: linear-gradient(135deg, #ffffffcc, #f7f3f6cc);
   padding: 2rem 2.5rem;
   border-radius: 1.2rem;
-  box-shadow: 0 8px 16px var(--sombra-media), 0 4px 8px var(--sombra-suave);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
   color: var(--color-primario);
   font-size: 1.15rem;
   line-height: 1.7;
   font-weight: bold;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
   border: 1px solid #ddd;
 }
 
@@ -139,7 +137,7 @@ nav li a:hover {
   color: var(--color-blanco);
   background: var(--color-primario);
   transform: translateY(-6px);
-  box-shadow: 0 16px 32px var(--sombra-intensa), 0 8px 16px var(--sombra-media);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .foto-hero {
@@ -153,10 +151,10 @@ nav li a:hover {
   height: auto;
   object-fit: contain;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px var(--sombra-media);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/*---FILA SUPERIOR---*/
+/*---SECCIÓN FOTO Y PRESENTACIÓN---*/
 .fila-superior {
   display: flex;
   gap: 2rem;
@@ -181,26 +179,25 @@ nav li a:hover {
   background: linear-gradient(135deg, #ffffffcc, #f7f3f6cc);
   padding: 2rem 2.5rem;
   border-radius: 1.2rem;
-  box-shadow: 0 8px 16px var(--sombra-media), 0 4px 8px var(--sombra-suave);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
   color: var(--color-primario);
   font-size: 1.15rem;
   line-height: 1.7;
-  font-weight: bold;
   border: 1px solid #ddd;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+  font-weight: bold;
 }
 
 #presentacion:hover {
   color: var(--color-blanco);
   transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.1);
   background: var(--color-primario);
-  box-shadow: 0 16px 32px var(--sombra-intensa), 0 8px 16px var(--sombra-media);
 }
 
 #presentacion p {
   margin-bottom: 1.2rem;
   text-align: justify;
-  letter-spacing: 0.02em;
 }
 
 /*---SECCIÓN LENGUAJES---*/
@@ -216,15 +213,15 @@ nav li a:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px 100px;
+  list-style: none;
   padding: 0;
   margin: 0;
-  list-style: none;
 }
 
 .lista-lenguajes li button {
   background-color: var(--color-secundario);
   border: none;
-  color: white;
+  color: var(--color-blanco);
   padding: var(--padding-botones);
   font-size: var(--font-size-botones);
   border-radius: var(--radio-bordes);
@@ -245,10 +242,11 @@ footer {
   color: var(--color-primario);
   text-align: center;
   padding: 20px 15px;
+  font-family: var(--fuente-principal);
   font-size: 1rem;
   border-top: 1px solid var(--color-secundario);
-  box-shadow: 0 -2px 6px var(--sombra-suave);
-  border-radius: var(--radio-bordes-grande) var(--radio-bordes-grande) 0 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  border-radius: 12px 12px 0 0;
 }
 
 footer p {
@@ -256,50 +254,61 @@ footer p {
 }
 
 footer a {
-  color: white;
+  color: var(--color-blanco);
   text-decoration: none;
   margin: 0 10px;
   font-weight: 600;
   padding: 10px 20px;
-  border-radius: var(--radio-bordes);
+  border-radius: 8px;
   display: inline-block;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 footer a:hover {
   background-color: var(--color-primario);
-  box-shadow: 0 4px 8px var(--sombra-intensa);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/*---MEDIA QUERIES---*/
-
-/* Móviles (<600px) */
-@media (max-width: 599px) {
+/*---RESPONSIVE---*/
+/* Móviles */
+@media (max-width: 768px) {
   main {
     flex-direction: column;
     padding: 1rem;
-  }
-
-  #foto, #presentacion, .foto-hero, .texto-hero {
-    flex: 1 1 100%;
+    gap: 1rem;
   }
 
   .contenedor-hero {
     flex-direction: column-reverse;
-    text-align: center;
     align-items: center;
+    text-align: center;
   }
 
-  .foto-hero img, .mi-foto {
-    max-width: 100%;
-    height: auto;
+  .texto-hero {
+    flex: 1 1 100% !important;
+    text-align: justify;
+    padding: 1.5rem;
+  }
+
+  .foto-hero {
+    flex: 1 1 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .foto-hero img,
+  .mi-foto {
+    max-width: 100% !important;
+    height: auto !important;
     object-fit: contain;
+  }
+
+  #foto,
+  #presentacion {
+    flex: 1 1 100%;
   }
 
   nav ul {
     flex-direction: column;
     gap: 10px;
-    padding: 10px;
   }
 
   nav li a {
@@ -324,8 +333,8 @@ footer a:hover {
   }
 }
 
-/* Tablets (600px - 899px) */
-@media (min-width: 600px) and (max-width: 899px) {
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
   main {
     padding: 1.5rem;
     flex-wrap: wrap;
@@ -340,7 +349,7 @@ footer a:hover {
   }
 
   nav ul {
-    gap: 40px;
+    gap: 30px;
     padding: 10px 15px;
   }
 
@@ -359,21 +368,4 @@ footer a:hover {
   }
 }
 
-/* Escritorio (>=900px) */
-@media (min-width: 900px) {
-  main {
-    padding: 2rem;
-  }
 
-  .contenedor-hero {
-    flex-direction: row;
-  }
-
-  #foto {
-    flex: 1 1 35%;
-  }
-
-  #presentacion {
-    flex: 2 1 60%;
-  }
-}
