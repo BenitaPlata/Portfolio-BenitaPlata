@@ -129,9 +129,7 @@ nav {
     transition: transform 0.3  s ease;
   }
   
-  .proyecto:hover {
-    transform: translateY(-5px);
-  }
+ 
   
 .proyecto img {
   width: 100%;
@@ -146,11 +144,12 @@ nav {
 .proyecto-link {
   text-decoration: none; /* Quita el subrayado */
   color: inherit;        /* Mantiene el color del texto de la tarjeta */
-  display: block;        /* Hace que el enlace abarque todo el artículo */
+  display: block;    
+  transition: transform 0.3s ease;    /* Hace que el enlace abarque todo el artículo */
 }
 
 /* Efecto hover opcional para la tarjeta */
-.proyecto-link:hover .proyecto {
+.proyecto-link:hover  {
   transform: translateY(-5px);
 }
 
@@ -190,6 +189,8 @@ nav {
       max-width: 90%;
     }
   }
+
+ 
   
   /* Móviles y tablets en orientación vertical (menos de 768px) */
   @media (max-width: 767px) {
