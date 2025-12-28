@@ -190,6 +190,10 @@ nav {
     }
   }
 
+  .proyecto-destacado .proyecto:hover {
+  box-shadow: 0 0 20px rgba(155, 92, 246, 0.3);
+}
+
  
   
   /* Móviles y tablets en orientación vertical (menos de 768px) */
