@@ -19,6 +19,10 @@
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <style>
       /* ===== RESET & VARIABLES ===== */
       *,
@@ -147,6 +151,11 @@
       }
       .nav-links a:hover::after {
         width: 100%;
+      }
+
+      .skill-icon i {
+        color: var(--accent);
+        font-size: 28px;
       }
 
       .menu-toggle {
@@ -453,7 +462,7 @@
       .marquee-track {
         display: flex;
         gap: 3.5rem;
-        animation: marquee 32s linear infinite; 
+        animation: marquee 32s linear infinite;
         width: max-content;
       }
 
@@ -467,7 +476,7 @@
 
         color: rgba(255, 255, 255, 0.55);
 
-        text-shadow: 0 0 6px rgba(216, 131, 166, 0.2); 
+        text-shadow: 0 0 6px rgba(216, 131, 166, 0.2);
 
         transition: color 0.3s ease;
       }
@@ -1297,7 +1306,9 @@
 
         <div class="skills-grid">
           <div class="skill-card reveal">
-            <div class="skill-icon">🎨</div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
             <h3 class="skill-cat-title">Frontend</h3>
             <div class="skill-tags">
               <span class="skill-tag">HTML5</span>
@@ -1308,8 +1319,11 @@
               <span class="skill-tag">Bootstrap</span>
             </div>
           </div>
+
           <div class="skill-card reveal reveal-d1">
-            <div class="skill-icon">⚙️</div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-server"></i>
+            </div>
             <h3 class="skill-cat-title">Backend</h3>
             <div class="skill-tags">
               <span class="skill-tag">Node.js</span>
@@ -1318,16 +1332,22 @@
               <span class="skill-tag">APIs REST</span>
             </div>
           </div>
+
           <div class="skill-card reveal reveal-d2">
-            <div class="skill-icon">🗄️</div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-database"></i>
+            </div>
             <h3 class="skill-cat-title">Bases de datos</h3>
             <div class="skill-tags">
               <span class="skill-tag">MySQL</span>
               <span class="skill-tag">MongoDB</span>
             </div>
           </div>
+
           <div class="skill-card reveal reveal-d3">
-            <div class="skill-icon">🛠️</div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-gears"></i>
+            </div>
             <h3 class="skill-cat-title">Herramientas</h3>
             <div class="skill-tags">
               <span class="skill-tag">Git & GitHub</span>
@@ -1338,8 +1358,11 @@
               <span class="skill-tag">VS Code</span>
             </div>
           </div>
+
           <div class="skill-card reveal reveal-d4">
-            <div class="skill-icon">🤖</div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-robot"></i>
+            </div>
             <h3 class="skill-cat-title">IA & Automatización</h3>
             <div class="skill-tags">
               <span class="skill-tag">IA Generativa</span>
@@ -1347,8 +1370,11 @@
               <span class="skill-tag">Prompt Engineering</span>
             </div>
           </div>
+
           <div class="skill-card reveal reveal-d4">
-            <div class="skill-icon">✏️</div>
+            <div class="skill-icon">
+              <i class="fa-solid fa-pencil"></i>
+            </div>
             <h3 class="skill-cat-title">Diseño & UX</h3>
             <div class="skill-tags">
               <span class="skill-tag">UX/UI</span>
@@ -1704,7 +1730,6 @@
 
     <!-- JS -->
     <script>
-     
       const revealEls = document.querySelectorAll(".reveal");
       const observer = new IntersectionObserver(
         (entries) => {
@@ -1728,7 +1753,6 @@
         navLinks.classList.remove("open");
       }
 
-     
       let lastScroll = 0;
       const navEl = document.querySelector("nav");
       const backToTop = document.getElementById("backToTop");
@@ -1737,7 +1761,7 @@
         navEl.style.transform =
           cur > lastScroll && cur > 80 ? "translateY(-100%)" : "translateY(0)";
         lastScroll = cur;
-       
+
         if (cur > 500) {
           backToTop.classList.add("visible");
         } else {
@@ -1745,7 +1769,6 @@
         }
       });
 
-   
       function toggleOther() {
         const grid = document.getElementById("otherGrid");
         const btn = document.getElementById("otherToggle");
