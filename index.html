@@ -227,7 +227,7 @@
       /* ===== HERO ===== */
       .hero {
         padding: 0 !important;
-        min-height: 100vh;
+        min-height: 100dvh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -311,6 +311,7 @@
         line-height: 1.06;
         letter-spacing: -2px;
         margin-bottom: 1.5rem;
+        max-width: 12ch;
       }
       .hero h1 .line {
         display: block;
@@ -319,6 +320,9 @@
         color: var(--accent);
       }
 
+      .hero-inner {
+        padding: 0 20px;
+      }
       .hero-desc {
         color: rgba(255, 255, 255, 0.75);
         font-size: 1.02rem;
@@ -420,6 +424,56 @@
           0 0 20px var(--accent),
           0 0 50px var(--accent),
           0 0 90px rgba(216, 131, 166, 0.6);
+      }
+
+      @media (max-width: 768px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 3rem;
+        }
+
+        .hero-desc {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .hero-ctas {
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          letter-spacing: -1px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.2rem;
+          line-height: 1.15;
+          letter-spacing: -1px;
+        }
+
+        .hero-desc {
+          font-size: 0.95rem;
+          padding: 0 10px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding: 0 20px;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+          line-height: 1.2;
+          letter-spacing: -0.5px;
+        }
       }
 
       /* ===== MARQUEE TECH ===== */
@@ -1386,170 +1440,214 @@
       </div>
     </section>
 
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="section-divider">
-      <div class="section-inner">
-        <div class="section-label reveal">04 — Proyectos</div>
-        <h2 class="section-title reveal reveal-d1">Lo que he construido</h2>
-        <p class="section-subtitle reveal reveal-d2">
-          Proyectos donde he puesto en práctica lo aprendido. Cada uno me ha
-          enseñado algo nuevo.
-        </p>
+  <!-- PROYECTOS -->
+<section id="proyectos" class="section-divider">
+  <div class="section-inner">
+    <div class="section-label reveal">04 — Proyectos</div>
+    <h2 class="section-title reveal reveal-d1">Lo que he construido</h2>
+    <p class="section-subtitle reveal reveal-d2">
+      Proyectos donde he puesto en práctica lo aprendido. Cada uno me ha
+      enseñado algo nuevo.
+    </p>
 
-        <!-- DESTACADOS -->
-        <div class="projects-grid">
-          <div class="project-card reveal">
-            <div class="project-thumb">
-              <img
-                src="imágenes/jobfinder.webp"
-                alt="JobFinder — plataforma de empleo con IA"
-              />
-              <div class="project-thumb-overlay"></div>
-            </div>
-            <div class="project-info">
-              <span class="project-tag">TFM · Full Stack + IA</span>
-              <h3 class="project-title">JobFinder</h3>
-              <p class="project-desc">
-                Plataforma de empleo tech con IA para análisis de CV,
-                comparación automática CV-oferta y recomendaciones
-                personalizadas. Incluye geolocalización, autenticación con roles
-                y panel admin.
-              </p>
-              <div class="project-tech">
-                <span>React</span><span>Node.js</span><span>Express</span
-                ><span>MongoDB</span><span>IA</span>
-              </div>
-              <div class="project-links">
-                <a href="https://jobfinder-app-ai.vercel.app/" target="_blank"
-                  >Demo →</a
-                >
-                <a href="https://github.com/BenitaPlata" target="_blank"
-                  >GitHub →</a
-                >
-              </div>
-            </div>
+    <!-- DESTACADOS -->
+    <div class="projects-grid">
+
+      <!-- JOBFINDER -->
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <img
+            src="imágenes/jobfinder.webp"
+            alt="JobFinder — plataforma de empleo con IA"
+          />
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">TFM · Full Stack + IA</span>
+          <h3 class="project-title">JobFinder</h3>
+          <p class="project-desc">
+            Plataforma de empleo tech con IA para análisis de CV,
+            comparación automática CV-oferta y recomendaciones
+            personalizadas. Incluye geolocalización, autenticación con roles
+            y panel admin.
+          </p>
+          <div class="project-tech">
+            <span>React</span><span>Node.js</span><span>Express</span>
+            <span>MongoDB</span><span>IA</span>
           </div>
-
-          <div class="project-card reveal reveal-d1">
-            <div class="project-thumb">
-              <img
-                src="imágenes/antes-despues.webp"
-                alt="Showcase CSS — efectos visuales"
-              />
-              <div class="project-thumb-overlay"></div>
-            </div>
-            <div class="project-info">
-              <span class="project-tag">CSS Puro</span>
-              <h3 class="project-title">Showcase CSS</h3>
-              <p class="project-desc">
-                Colección interactiva de efectos visuales creados con CSS puro:
-                animaciones, transiciones, overlays, sliders y
-                microinteracciones.
-              </p>
-              <div class="project-tech">
-                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-              </div>
-              <div class="project-links">
-                <a href="https://showcase-css.vercel.app/" target="_blank"
-                  >Demo →</a
-                >
-                <a href="https://github.com/BenitaPlata" target="_blank"
-                  >GitHub →</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card reveal reveal-d2">
-            <div class="project-thumb">
-              <img
-                src="imágenes/burbujas.webp"
-                alt="BubblEase — app interactiva React"
-              />
-              <div class="project-thumb-overlay"></div>
-            </div>
-            <div class="project-info">
-              <span class="project-tag">React · Animaciones</span>
-              <h3 class="project-title">BubblEase</h3>
-              <p class="project-desc">
-                Aplicación interactiva que genera burbujas animadas mediante un
-                sistema de partículas personalizado. Animaciones CSS optimizadas
-                y diseño responsive.
-              </p>
-              <div class="project-tech">
-                <span>React</span><span>CSS Animations</span
-                ><span>Particles</span>
-              </div>
-              <div class="project-links">
-                <a href="https://bubblease.vercel.app/" target="_blank"
-                  >Demo →</a
-                >
-                <a href="https://github.com/BenitaPlata" target="_blank"
-                  >GitHub →</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card reveal">
-            <div class="project-thumb">
-              <img
-                src="imágenes/arco-iris.webp"
-                alt="MontessoriPlay — CRUD React"
-              />
-              <div class="project-thumb-overlay"></div>
-            </div>
-            <div class="project-info">
-              <span class="project-tag">React · CRUD</span>
-              <h3 class="project-title">MontessoriPlay</h3>
-              <p class="project-desc">
-                Frontend con React y Context API. CRUD funcional, búsqueda,
-                preview de imágenes y layout responsive. Estética Montessori.
-              </p>
-              <div class="project-tech">
-                <span>React</span><span>Context API</span><span>Vercel</span>
-              </div>
-              <div class="project-links">
-                <a href="https://montessori-play.vercel.app/" target="_blank"
-                  >Demo →</a
-                >
-                <a href="https://github.com/BenitaPlata" target="_blank"
-                  >GitHub →</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="project-card reveal reveal-d1">
-            <div class="project-thumb">
-              <img
-                src="imágenes/backend.webp"
-                alt="Portal de sesiones — backend Node.js"
-              />
-              <div class="project-thumb-overlay"></div>
-            </div>
-            <div class="project-info">
-              <span class="project-tag">Backend · Node.js</span>
-              <h3 class="project-title">Portal de Sesiones</h3>
-              <p class="project-desc">
-                Backend con Node.js y Express, renderizado con EJS. Registro,
-                login, gestión de sesiones, carrito, cookies y persistencia en
-                JSON.
-              </p>
-              <div class="project-tech">
-                <span>Node.js</span><span>Express</span><span>EJS</span
-                ><span>Sessions</span>
-              </div>
-              <div class="project-links">
-                <a
-                  href="https://github.com/BenitaPlata/EntornoServidor-Backend"
-                  target="_blank"
-                  >GitHub →</a
-                >
-              </div>
-            </div>
+          <div class="project-links">
+            <a href="https://jobfinder-app-ai.vercel.app/" target="_blank">
+              Demo →
+            </a>
+            <a href="https://github.com/BenitaPlata" target="_blank">
+              GitHub →
+            </a>
           </div>
         </div>
+      </div>
+
+
+      <!-- COURSEMIND AI (NUEVO) -->
+      <div class="project-card reveal reveal-d1">
+        <div class="project-thumb">
+          <img
+            src="imágenes/coursemind.webp"
+            alt="CourseMind AI — sistema de conocimiento educativo con IA"
+          />
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">IA · Automatización · RAG</span>
+          <h3 class="project-title">CourseMind AI</h3>
+          <p class="project-desc">
+            Sistema que transforma clases grabadas en conocimiento estructurado con IA.
+            Genera automáticamente material educativo (resúmenes, preguntas, contenido reutilizable)
+            y crea un tutor IA capaz de responder preguntas sobre el curso utilizando RAG.
+          </p>
+          <div class="project-tech">
+            <span>Next.js</span><span>TypeScript</span>
+            <span>n8n</span><span>OpenAI</span><span>RAG</span>
+          </div>
+          <div class="project-links">
+            <a href="https://coursemind-ai.vercel.app/" target="_blank">
+              Demo →
+            </a>
+            <a href="https://github.com/BenitaPlata/coursemind-ai" target="_blank">
+              GitHub →
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- SHOWCASE CSS -->
+      <div class="project-card reveal reveal-d1">
+        <div class="project-thumb">
+          <img
+            src="imágenes/antes-despues.webp"
+            alt="Showcase CSS — efectos visuales"
+          />
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">CSS Puro</span>
+          <h3 class="project-title">Showcase CSS</h3>
+          <p class="project-desc">
+            Colección interactiva de efectos visuales creados con CSS puro:
+            animaciones, transiciones, overlays, sliders y
+            microinteracciones.
+          </p>
+          <div class="project-tech">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://showcase-css.vercel.app/" target="_blank">
+              Demo →
+            </a>
+            <a href="https://github.com/BenitaPlata" target="_blank">
+              GitHub →
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- BUBBLEASE -->
+      <div class="project-card reveal reveal-d2">
+        <div class="project-thumb">
+          <img
+            src="imágenes/burbujas.webp"
+            alt="BubblEase — app interactiva React"
+          />
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">React · Animaciones</span>
+          <h3 class="project-title">BubblEase</h3>
+          <p class="project-desc">
+            Aplicación interactiva que genera burbujas animadas mediante un
+            sistema de partículas personalizado. Animaciones CSS optimizadas
+            y diseño responsive.
+          </p>
+          <div class="project-tech">
+            <span>React</span><span>CSS Animations</span><span>Particles</span>
+          </div>
+          <div class="project-links">
+            <a href="https://bubblease.vercel.app/" target="_blank">
+              Demo →
+            </a>
+            <a href="https://github.com/BenitaPlata" target="_blank">
+              GitHub →
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- MONTESSORI PLAY -->
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <img
+            src="imágenes/arco-iris.webp"
+            alt="MontessoriPlay — CRUD React"
+          />
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">React · CRUD</span>
+          <h3 class="project-title">MontessoriPlay</h3>
+          <p class="project-desc">
+            Frontend con React y Context API. CRUD funcional, búsqueda,
+            preview de imágenes y layout responsive. Estética Montessori.
+          </p>
+          <div class="project-tech">
+            <span>React</span><span>Context API</span><span>Vercel</span>
+          </div>
+          <div class="project-links">
+            <a href="https://montessori-play.vercel.app/" target="_blank">
+              Demo →
+            </a>
+            <a href="https://github.com/BenitaPlata" target="_blank">
+              GitHub →
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- PORTAL SESIONES -->
+      <div class="project-card reveal reveal-d1">
+        <div class="project-thumb">
+          <img
+            src="imágenes/backend.webp"
+            alt="Portal de sesiones — backend Node.js"
+          />
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Backend · Node.js</span>
+          <h3 class="project-title">Portal de Sesiones</h3>
+          <p class="project-desc">
+            Backend con Node.js y Express, renderizado con EJS. Registro,
+            login, gestión de sesiones, carrito, cookies y persistencia en
+            JSON.
+          </p>
+          <div class="project-tech">
+            <span>Node.js</span><span>Express</span><span>EJS</span>
+            <span>Sessions</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/BenitaPlata/EntornoServidor-Backend"
+              target="_blank"
+            >
+              GitHub →
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
         <!-- OTROS PROYECTOS -->
         <button
