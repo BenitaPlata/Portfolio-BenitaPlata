@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio de Benita Plata — Desarrolladora Web Junior Full Stack con enfoque técnico y creativo. Especializada en IA e Innovación."
+      content="Portfolio de Benita Plata — Web Developer & AI Automation. Desarrollo web, automatización con n8n e integración de IA en proyectos reales."
     />
     <meta
       name="keywords"
       content="portfolio, desarrolladora web, web developer, HTML, CSS, JavaScript, React, Node.js, IA, junior, full stack"
     />
     <meta name="robots" content="index, follow" />
-    <title>Benita Plata · Desarrolladora Web Full Stack</title>
+    <title>Benita Plata · Web Developer & AI Automation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -305,13 +305,13 @@
 
       .hero h1 {
         font-family: var(--font-display);
-        font-size: clamp(2.4rem, 4.8vw, 4rem);
+        font-size: clamp(2rem, 3.6vw, 3rem);
         text-shadow: 0 0 30px rgba(216, 131, 166, 0.15);
         font-weight: 800;
         line-height: 1.06;
         letter-spacing: -2px;
         margin-bottom: 1.5rem;
-        max-width: 12ch;
+        max-width: 16ch;
       }
       .hero h1 .line {
         display: block;
@@ -631,6 +631,28 @@
       }
 
       /* ===== TIMELINE ===== */
+      .trayectoria-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+      .trayectoria-col-header {
+        font-family: var(--font-display);
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding-bottom: 0.9rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid rgba(216, 131, 166, 0.2);
+      }
+      .trayectoria-col-header i {
+        font-size: 0.85rem;
+      }
       .timeline-grid {
         position: relative;
         padding-left: 2.5rem;
@@ -684,6 +706,12 @@
         color: var(--text-dim);
         margin-top: 0.4rem;
         line-height: 1.6;
+      }
+      @media (max-width: 900px) {
+        .trayectoria-cols {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
       }
 
       /* ===== SKILLS ===== */
@@ -1200,14 +1228,14 @@
         <div>
           <div class="hero-badge reveal">Abierta a oportunidades</div>
           <h1 class="reveal reveal-d1">
-            <span class="line">Soy <span class="accent">Benita </span>,</span>
-            <span class="line">desarrolladora</span>
-            <span class="line">web full stack.</span>
+            <span class="line">Soy <span class="accent">Benita</span>,</span>
+            <span class="line">web developer</span>
+            <span class="line">&amp; AI automation</span>
           </h1>
           <p class="hero-desc reveal reveal-d2">
-            Creo experiencias digitales con criterio visual, código limpio y
-            mentalidad creativa. Especializándome en IA aplicada al desarrollo
-            web.
+            Desarrollo web con criterio técnico e integro IA y automatización
+            para crear soluciones que realmente funcionan. Con experiencia real
+            en n8n, workflows inteligentes y proyectos full stack.
           </p>
           <div class="hero-ctas reveal reveal-d3">
             <a href="#proyectos" class="btn btn-primary">Ver proyectos ↓</a>
@@ -1253,30 +1281,27 @@
     <section id="sobre-mi" class="section-divider">
       <div class="section-inner">
         <div class="section-label reveal">01 — Sobre mí</div>
-        <h2 class="section-title reveal reveal-d1">
+        <h2 class="section-title reveal reveal-d1" style="font-size: clamp(1.4rem, 2.4vw, 2rem);">
           Curiosa por naturaleza,<br />developer por vocación
         </h2>
         <div class="about-grid">
           <div class="about-text">
             <p class="reveal reveal-d2">
-              Desarrolladora web junior Full Stack con
-              <strong>pasión</strong> por crear experiencias digitales limpias,
-              accesibles y visualmente atractivas. Me considero una persona
-              social y <strong>perseverante</strong>, y disfruto trabajando en
-              equipo para combinar ideas y lograr resultados de calidad.
+              Más de quince años trabajando con personas: gestionando equipos,
+              coordinando procesos, acompañando a clientes. Eso me dejó algo que
+              ningún bootcamp enseña: <strong>saber escuchar, organizarme y no
+              perder de vista para quién estoy trabajando.</strong>
             </p>
             <p class="reveal reveal-d3">
-              El frontend es un área donde disfruto, y ahora estoy dando un paso
-              más: me estoy formando en
-              <strong>Inteligencia Artificial e Innovación</strong> para aplicar
-              la IA de manera práctica en mis proyectos y aportar un valor
-              diferencial.
+              Desde 2024 me dedico al desarrollo web. Trabajo con React, Node.js
+              y cada vez más con <strong>automatización e IA</strong>: integro
+              workflows con n8n, construyo proyectos full stack y experimento con
+              lo que la IA puede hacer dentro de una app real.
             </p>
             <p class="reveal reveal-d4">
-              Mi trayectoria previa en gestión y coordinación de equipos me ha
-              dado una <strong>mentalidad analítica</strong>, orientada a la
-              eficiencia y la calidad. Mi objetivo es crear productos digitales
-              que realmente mejoren la vida de las personas.
+              Aprendo rápido, pregunto cuando no sé y trabajo mejor en equipo
+              que sola. Me interesa el código que <strong>resuelve cosas
+              concretas</strong>, no el que queda bonito en el repositorio.
             </p>
           </div>
           <div class="about-photo reveal reveal-d2">
@@ -1295,66 +1320,97 @@
         <div class="section-label reveal">02 — Trayectoria</div>
         <h2 class="section-title reveal reveal-d1">Mi camino hasta aquí</h2>
         <p class="section-subtitle reveal reveal-d2">
-          Más de 20 años de experiencia profesional que ahora aporto al
-          desarrollo web.
+          Experiencia técnica actual en desarrollo web, automatización e IA,
+          reforzada por una trayectoria sólida en gestión y comunicación.
         </p>
 
-        <div class="timeline-grid">
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2026 — Actualidad</div>
-            <div class="timeline-role">Máster en IA e Innovación</div>
-            <div class="timeline-place">Founderz · En curso</div>
+        <div class="trayectoria-cols">
+
+          <!-- EXPERIENCIA -->
+          <div>
+            <div class="trayectoria-col-header reveal">
+              <i class="fa-solid fa-briefcase"></i> Experiencia
+            </div>
+            <div class="timeline-grid">
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2026 — Actualidad</div>
+                <div class="timeline-role">Junior Web Developer & AI Automation</div>
+                <div class="timeline-place">VA360 Labs · Prácticas</div>
+                <div class="timeline-desc">
+                  Desarrollo y testing de automatizaciones con n8n, integración de
+                  IA en workflows, mantenimiento de entornos WordPress, QA,
+                  documentación técnica y automatización de contenido y recursos
+                  formativos. Desarrollo frontend de proyecto web desde cero.
+                </div>
+              </div>
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2026</div>
+                <div class="timeline-role">Web Developer — WordPress e-commerce</div>
+                <div class="timeline-place">Proyecto para cliente real</div>
+                <div class="timeline-desc">
+                  Desarrollo y puesta en producción de un ecommerce en WordPress:
+                  reestructuración web, optimización responsive, mejora de
+                  experiencia de usuario, configuración de tienda online,
+                  personalización de productos, SEO básico y seguimiento directo con
+                  cliente.
+                </div>
+              </div>
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2022 — 2024</div>
+                <div class="timeline-role">Community Manager</div>
+                <div class="timeline-desc">
+                  Gestión de contenido y comunicación digital, análisis de métricas
+                  y optimización de procesos.
+                </div>
+              </div>
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2008 — 2021</div>
+                <div class="timeline-role">Comercial administrativa · Agente Inmobiliario</div>
+                <div class="timeline-desc">
+                  Gestión documental, coordinación administrativa, seguimiento de
+                  clientes y apoyo a procesos comerciales.
+                </div>
+              </div>
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2005 — 2008</div>
+                <div class="timeline-role">Responsable de Tienda — Vodafone</div>
+                <div class="timeline-desc">
+                  Coordinación de equipos, gestión operativa, supervisión de
+                  objetivos y atención al cliente.
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2024 — 2026</div>
-            <div class="timeline-role">
-              CFGS Desarrollo de Aplicaciones Web (DAW)
+
+          <!-- FORMACIÓN -->
+          <div>
+            <div class="trayectoria-col-header reveal">
+              <i class="fa-solid fa-graduation-cap"></i> Formación
             </div>
-            <div class="timeline-place">
-              ThePower Business School · En curso
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2024 — 2026</div>
-            <div class="timeline-role">Máster Full Stack</div>
-            <div class="timeline-place">
-              ThePower Business School · Avalado por la UCAM · En curso
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2022 — 2024</div>
-            <div class="timeline-role">Community Manager</div>
-            <div class="timeline-desc">
-              Creación de contenidos digitales, estrategias de crecimiento
-              basadas en métricas e introducción de herramientas de
-              automatización.
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2008 — 2021</div>
-            <div class="timeline-role">
-              Agente Inmobiliario · Comercial · Administrativa
-            </div>
-            <div class="timeline-desc">
-              Coordinación de tareas y procesos, gestión de bases de datos,
-              documentación y apoyo a la digitalización de flujos de trabajo.
+            <div class="timeline-grid">
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2026 — Actualidad</div>
+                <div class="timeline-role">Máster en IA e Innovación</div>
+                <div class="timeline-place">Founderz · En curso</div>
+              </div>
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2024 — 2026</div>
+                <div class="timeline-role">CFGS Desarrollo de Aplicaciones Web (DAW)</div>
+                <div class="timeline-place">ThePower Business School · En curso</div>
+              </div>
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2024 — 2026</div>
+                <div class="timeline-role">Máster Full Stack</div>
+                <div class="timeline-place">ThePower Business School · Avalado por la UCAM</div>
+              </div>
+              <div class="timeline-item reveal">
+                <div class="timeline-date">2000 — 2005</div>
+                <div class="timeline-role">Administración y Dirección de Empresas (ADE)</div>
+                <div class="timeline-place">UCLM · 4º curso</div>
+              </div>
             </div>
           </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2005 — 2008</div>
-            <div class="timeline-role">Responsable de Tienda — Vodafone</div>
-            <div class="timeline-desc">
-              Supervisión de equipo de 5 personas, cumplimiento de objetivos
-              comerciales y optimización de procesos internos.
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-date">2000 — 2005</div>
-            <div class="timeline-role">
-              Administración y Dirección de Empresas (ADE)
-            </div>
-            <div class="timeline-place">UCLM · 4º curso (no finalizado)</div>
-          </div>
+
         </div>
       </div>
     </section>
@@ -1382,6 +1438,7 @@
               <span class="skill-tag">JavaScript ES6+</span>
               <span class="skill-tag">React</span>
               <span class="skill-tag">Next.js</span>
+              <span class="skill-tag">Tailwind</span>
               <span class="skill-tag">Bootstrap</span>
             </div>
           </div>
@@ -1431,6 +1488,7 @@
             </div>
             <h3 class="skill-cat-title">IA & Automatización</h3>
             <div class="skill-tags">
+              <span class="skill-tag">n8n</span>
               <span class="skill-tag">IA Generativa</span>
               <span class="skill-tag">Automatización</span>
               <span class="skill-tag">Prompt Engineering</span>
@@ -1767,7 +1825,7 @@
         <div class="section-label reveal">05 — Contacto</div>
         <h2 class="section-title reveal reveal-d1">¿Hablamos?</h2>
         <p class="section-subtitle reveal reveal-d2">
-          Buscando mi primer empleo como desarrolladora. Escríbeme.
+          En búsqueda activa de empleo como desarrolladora. Escríbeme.
         </p>
 
         <div class="contact-grid">
