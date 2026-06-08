@@ -524,7 +524,7 @@
 
       .marquee-item {
         font-family: var(--font-display);
-        font-size: 1.05rem;
+        font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 4px;
         text-transform: uppercase;
@@ -706,6 +706,37 @@
         color: var(--text-dim);
         margin-top: 0.4rem;
         line-height: 1.6;
+      }
+      .timeline-item.tech-highlight {
+        background: rgba(216, 131, 166, 0.04);
+        border: 1px solid rgba(216, 131, 166, 0.12);
+        border-radius: 12px;
+        padding: 1rem 1rem 1rem 1.5rem;
+        margin-left: -1rem;
+      }
+      .timeline-item.tech-highlight .timeline-role {
+        color: var(--text);
+      }
+      .timeline-badge {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--accent);
+        background: var(--accent-glow);
+        border: 1px solid rgba(216, 131, 166, 0.25);
+        border-radius: 50px;
+        padding: 0.15rem 0.6rem;
+        margin-bottom: 0.4rem;
+      }
+      .timeline-item.prev-exp .timeline-role {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-dim);
+      }
+      .timeline-item.prev-exp .timeline-date {
+        opacity: 0.7;
       }
       @media (max-width: 900px) {
         .trayectoria-cols {
@@ -1233,9 +1264,10 @@
             <span class="line">&amp; AI automation</span>
           </h1>
           <p class="hero-desc reveal reveal-d2">
-            Desarrollo web con criterio técnico e integro IA y automatización
-            para crear soluciones que realmente funcionan. Con experiencia real
-            en n8n, workflows inteligentes y proyectos full stack.
+            Construyo webs, lanzo tiendas online y automatizo procesos con IA
+            para que las empresas trabajen mejor. He eliminado tareas manuales,
+            conectado usuarios reales y puesto proyectos en producción que
+            siguen funcionando.
           </p>
           <div class="hero-ctas reveal reveal-d3">
             <a href="#proyectos" class="btn btn-primary">Ver proyectos ↓</a>
@@ -1293,10 +1325,11 @@
               perder de vista para quién estoy trabajando.</strong>
             </p>
             <p class="reveal reveal-d3">
-              Desde 2024 me dedico al desarrollo web. Trabajo con React, Node.js
-              y cada vez más con <strong>automatización e IA</strong>: integro
-              workflows con n8n, construyo proyectos full stack y experimento con
-              lo que la IA puede hacer dentro de una app real.
+              Desde 2024 me dedico al desarrollo web. He lanzado tiendas online
+              para clientes reales, <strong>automatizado flujos de trabajo con
+              IA</strong> para eliminar tareas repetitivas y construido
+              plataformas full stack desde cero. Lo que me mueve es que el
+              resultado resuelva algo, no solo que compile.
             </p>
             <p class="reveal reveal-d4">
               Aprendo rápido, pregunto cuando no sé y trabajo mejor en equipo
@@ -1332,48 +1365,49 @@
               <i class="fa-solid fa-briefcase"></i> Experiencia
             </div>
             <div class="timeline-grid">
-              <div class="timeline-item reveal">
-                <div class="timeline-date">2026 — Actualidad</div>
+              <div class="timeline-item tech-highlight reveal">
+                <div class="timeline-badge">Experiencia técnica</div>
+                <div class="timeline-date">Feb 2026 — Jun 2026</div>
                 <div class="timeline-role">Junior Web Developer & AI Automation</div>
-                <div class="timeline-place">VA360 Labs · Prácticas</div>
+                <div class="timeline-place">VA360 Labs</div>
                 <div class="timeline-desc">
-                  Desarrollo y testing de automatizaciones con n8n, integración de
-                  IA en workflows, mantenimiento de entornos WordPress, QA,
-                  documentación técnica y automatización de contenido y recursos
-                  formativos. Desarrollo frontend de proyecto web desde cero.
+                  Diseño de automatizaciones con n8n e IA para reducir tareas
+                  manuales. Integración de IA en workflows y procesos digitales.
+                  Optimización de entornos WordPress y documentación técnica.
+                  Desarrollo frontend de proyectos web desde cero.
                 </div>
               </div>
-              <div class="timeline-item reveal">
+              <div class="timeline-item tech-highlight reveal">
+                <div class="timeline-badge">Experiencia técnica</div>
                 <div class="timeline-date">2026</div>
                 <div class="timeline-role">Web Developer — WordPress e-commerce</div>
                 <div class="timeline-place">Proyecto para cliente real</div>
                 <div class="timeline-desc">
-                  Desarrollo y puesta en producción de un ecommerce en WordPress:
-                  reestructuración web, optimización responsive, mejora de
-                  experiencia de usuario, configuración de tienda online,
-                  personalización de productos, SEO básico y seguimiento directo con
-                  cliente.
+                  Desarrollo y puesta en producción de tienda online en WordPress.
+                  Análisis de necesidades del cliente y propuesta de mejoras UX.
+                  Personalización de catálogo, procesos de compra y SEO básico.
+                  Coordinación directa con cliente durante todo el proyecto.
                 </div>
               </div>
-              <div class="timeline-item reveal">
+              <div class="timeline-item prev-exp reveal">
                 <div class="timeline-date">2022 — 2024</div>
-                <div class="timeline-role">Community Manager</div>
+                <div class="timeline-role">Marketing Digital y Redes Sociales</div>
                 <div class="timeline-desc">
                   Gestión de contenido y comunicación digital, análisis de métricas
                   y optimización de procesos.
                 </div>
               </div>
-              <div class="timeline-item reveal">
-                <div class="timeline-date">2008 — 2021</div>
-                <div class="timeline-role">Comercial administrativa · Agente Inmobiliario</div>
+              <div class="timeline-item prev-exp reveal">
+                <div class="timeline-date">2005 — 2023</div>
+                <div class="timeline-role">Administración, Gestión Documental y Atención al Cliente</div>
                 <div class="timeline-desc">
                   Gestión documental, coordinación administrativa, seguimiento de
                   clientes y apoyo a procesos comerciales.
                 </div>
               </div>
-              <div class="timeline-item reveal">
-                <div class="timeline-date">2005 — 2008</div>
-                <div class="timeline-role">Responsable de Tienda — Vodafone</div>
+              <div class="timeline-item prev-exp reveal">
+                <div class="timeline-date">2007 — 2008</div>
+                <div class="timeline-role">Responsable de Tienda y Atención al Cliente</div>
                 <div class="timeline-desc">
                   Coordinación de equipos, gestión operativa, supervisión de
                   objetivos y atención al cliente.
@@ -1394,9 +1428,14 @@
                 <div class="timeline-place">Founderz · En curso</div>
               </div>
               <div class="timeline-item reveal">
+                <div class="timeline-date">2026 — 2027</div>
+                <div class="timeline-role">CFGS Desarrollo de Aplicaciones Multiplataforma (DAM)</div>
+                <div class="timeline-place">ThePower Business School</div>
+              </div>
+              <div class="timeline-item reveal">
                 <div class="timeline-date">2024 — 2026</div>
                 <div class="timeline-role">CFGS Desarrollo de Aplicaciones Web (DAW)</div>
-                <div class="timeline-place">ThePower Business School · En curso</div>
+                <div class="timeline-place">ThePower Business School</div>
               </div>
               <div class="timeline-item reveal">
                 <div class="timeline-date">2024 — 2026</div>
