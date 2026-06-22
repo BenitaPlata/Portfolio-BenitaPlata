@@ -155,9 +155,9 @@ Lighthouse Performance Score: 95+
 
 **Benita Plata**
 
-* GitHub: @BenitaPlata
-* Portfolio
-* LinkedIn
+🔗 [GitHub](https://github.com/BenitaPlata) •
+🌐 [Portfolio](https://portfolio-benitaplata.vercel.app) •
+💼 [LinkedIn](https://www.linkedin.com/in/TU-USUARIO-LINKEDIN/)
 
 ---
 
