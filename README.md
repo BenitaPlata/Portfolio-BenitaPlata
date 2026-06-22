@@ -1,167 +1,166 @@
-⚡ Benita Plata — Portfolio como Producto Digital
+# ⚡ Benita Plata — Portfolio como Producto Digital
 
 Desarrolladora Web Full Stack enfocada en arquitectura limpia, experiencia de usuario y construcción de sistemas escalables.
 
-Este proyecto no es solo una web personal.
-Está diseñado como un producto digital real, donde cada decisión visual y técnica responde a criterios de estructura, rendimiento y claridad.
+Este proyecto no es solo una web personal. Está diseñado como un producto digital real, donde cada decisión visual y técnica responde a criterios de estructura, rendimiento y claridad.
 
-🌍 Proyecto en Producción
+🌍 **Proyecto en Producción**
 
 👉 https://portfolio-benitaplata.vercel.app/
 
-🧠 Visión del Proyecto
+---
+
+# 🧠 Visión del Proyecto
 
 El objetivo no era únicamente mostrar proyectos, sino construir:
 
-Un sistema visual coherente
+* Un sistema visual coherente
+* Una arquitectura mantenible
+* Un layout estable sin hacks
+* Una experiencia fluida y profesional
 
-Una arquitectura mantenible
+Se priorizó el control total del DOM y del CSS sin depender de frameworks externos.
 
-Un layout estable sin hacks
+---
 
-Una experiencia fluida y profesional
+# 🧱 Arquitectura Técnica
 
-Se priorizó control total del DOM y del CSS sin depender de frameworks.
+## Estructura
 
-🧱 Arquitectura Técnica
-Estructura
+| Elemento      | Implementación                                         |
+| ------------- | ------------------------------------------------------ |
+| HTML          | Semántico y organizado por secciones claras            |
+| CSS           | Separación completa entre estructura y presentación    |
+| Variables CSS | Sistema centralizado para mantener consistencia visual |
+| JavaScript    | Comportamiento desacoplado de la capa visual           |
 
-HTML semántico y organizado por secciones claras
+## Layout
 
-Separación conceptual entre estructura, estilo y comportamiento
+| Técnica         | Uso                                                 |
+| --------------- | --------------------------------------------------- |
+| CSS Grid        | Estructura principal de la aplicación               |
+| Flexbox         | Alineaciones internas y componentes                 |
+| Responsive      | Adaptación fluida sin romper el flujo del documento |
+| Posicionamiento | Eliminación de hacks basados en transform           |
 
-Sistema de variables CSS centralizado
+## Animaciones
 
-Layout
+| Técnica                    | Objetivo                               |
+| -------------------------- | -------------------------------------- |
+| Intersection Observer      | Activación eficiente según visibilidad |
+| Cubic-bezier personalizado | Transiciones naturales                 |
+| Microinteracciones         | Refuerzo visual sin distracciones      |
+| Animaciones suaves         | Mejora de percepción y profundidad     |
 
-CSS Grid para estructura principal
+---
 
-Flexbox para alineaciones internas
+# 🛠 Stack Tecnológico
 
-Eliminación de transform como solución de posicionamiento
+| Tecnología                | Uso                                 |
+| ------------------------- | ----------------------------------- |
+| HTML5                     | Estructura                          |
+| CSS3                      | Diseño, Grid, Flexbox y animaciones |
+| JavaScript Vanilla        | Lógica e interactividad             |
+| Intersection Observer API | Animaciones basadas en scroll       |
+| Scroll Nativo             | Navegación fluida                   |
+| Responsive Design         | Adaptación multidispositivo         |
 
-Control de responsive sin romper flujo del documento
+**Sin frameworks. Sin dependencias externas. Fundamentos sólidos.**
 
-Animaciones
+---
 
-Uso de cubic-bezier personalizado
+# 🎨 Diseño y Experiencia de Usuario
 
-Intersection Observer para activación eficiente
+## Componentes Destacados
 
-Animaciones suaves y no intrusivas
+* Hero principal con sistema orbital animado
+* Navbar dinámica con ocultación inteligente por scroll
+* Marquee infinito de tecnologías
+* Animaciones activadas por scroll
+* Sistema coherente de botones
+* Footer con identidad visual integrada
 
-Microinteracciones enfocadas en profundidad visual
+## Principios Aplicados
 
-🛠 Stack Tecnológico
+| Principio                | Aplicación                            |
+| ------------------------ | ------------------------------------- |
+| Jerarquía Visual         | Organización clara de la información  |
+| Movimiento con Intención | Animaciones funcionales               |
+| Contraste Controlado     | Mejora de legibilidad                 |
+| Consistencia Visual      | Lenguaje visual uniforme              |
+| Minimalismo Funcional    | Eliminación de elementos innecesarios |
 
-Base
+---
 
-HTML5
+# 📱 Estrategia Responsive
 
-CSS3 (Grid, Flexbox, Animaciones avanzadas)
+Desarrollado siguiendo un enfoque **mobile-first**.
 
-JavaScript Vanilla
+### Dispositivos evaluados
 
-APIs del navegador
+| Resolución | Dispositivo |
+| ---------- | ----------- |
+| 375px      | Smartphone  |
+| 768px+     | Tablet      |
+| 1024px+    | Desktop     |
 
-Intersection Observer API
+Características principales:
 
-Scroll nativo suave
+* Layout adaptable sin ruptura estructural
+* Escalado progresivo de componentes
+* Navegación optimizada para dispositivos táctiles
+* Ausencia de hacks visuales para garantizar estabilidad
 
-Responsive adaptativo
+---
 
-Sin frameworks.
-Sin dependencias externas.
-Fundamentos sólidos.
+# 📈 Rendimiento
 
-🎨 Diseño y Experiencia de Usuario
+## Optimizaciones Implementadas
 
-Elementos destacados:
+* Animaciones ligeras y eficientes
+* Ausencia de librerías pesadas
+* DOM limpio y controlado
+* Fluidez visual sin bloqueos
+* Código optimizado para futuras auditorías Lighthouse
 
-Hero con sistema orbital animado
+### Objetivo
 
-Navbar dinámica con ocultación por scroll
+```text
+Lighthouse Performance Score: 95+
+```
 
-Marquee infinito de tecnologías
+---
 
-Animaciones activadas por scroll
+# 🔄 Próximas Iteraciones
 
-Sistema de botones coherente
+* Lazy Loading de imágenes
+* Auditoría completa de accesibilidad (ARIA + contraste)
+* Optimización avanzada de rendimiento
+* Refactorización futura hacia React con arquitectura modular
 
-Footer con identidad visual sutil
+---
 
-Principios aplicados:
+# 🧩 Qué Demuestra Este Proyecto
 
-Jerarquía clara
+* Dominio de sistemas modernos de layout
+* Capacidad para resolver problemas responsive sin hacks
+* Pensamiento modular sin necesidad de frameworks
+* Control detallado de animaciones y microinteracciones
+* Sensibilidad en diseño UI y experiencia de usuario
+* Mentalidad orientada a producto y escalabilidad
 
-Movimiento con intención
+---
 
-Contraste controlado
+# 👩‍💻 Autora
 
-Consistencia visual
+**Benita Plata**
 
-Minimalismo funcional
+* GitHub: @BenitaPlata
+* Portfolio
+* LinkedIn
 
-📱 Estrategia Responsive
+---
 
-Desarrollado con enfoque mobile-first y probado en:
+# 📄 Licencia
 
-375px (móvil)
-
-Tablet
-
-Desktop
-
-Se evitó el uso de hacks visuales para mantener estabilidad estructural.
-
-📈 Rendimiento
-
-Animaciones ligeras
-
-Sin librerías pesadas
-
-DOM limpio
-
-Fluidez sin bloqueos
-
-Preparado para optimización Lighthouse 95+
-
-🔄 Próximas Iteraciones
-
-Lazy loading de imágenes
-
-Auditoría completa de accesibilidad (ARIA + contraste)
-
-Optimización avanzada de rendimiento
-
-Versión futura en React con arquitectura modular
-
-🧩 Qué Demuestra Este Proyecto
-
-Dominio de sistemas modernos de layout
-
-Capacidad de resolver problemas de responsive sin hacks
-
-Pensamiento modular sin frameworks
-
-Control detallado de animaciones
-
-Sensibilidad en diseño UI
-
-Mentalidad orientada a producto, no solo a código
-
-👩‍💻 Sobre Mí
-
-Desarrolladora Web Full Stack con experiencia previa en gestión y coordinación de equipos, ahora enfocada en construir productos digitales eficientes y escalables.
-
-Actualmente especializándome en:
-
-Aplicaciones web con IA
-
-Arquitectura Full Stack
-
-Optimización de experiencia digital
-
-🔗 LinkedIn → https://linkedin.com/in/benita-plata-90862b296
-
-💻 GitHub → https://github.com/BenitaPlata
+MIT License
