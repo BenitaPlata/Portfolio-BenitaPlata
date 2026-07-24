@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio de Benita Plata — Web Developer & AI Automation. Desarrollo web, automatización con n8n e integración de IA en proyectos reales."
+      content="Portfolio de Benita Plata — Frontend Developer especializada en React. Interfaces con criterio de diseño y negocio, IA aplicada en proyectos reales."
     />
     <meta
       name="keywords"
       content="portfolio, desarrolladora web, web developer, HTML, CSS, JavaScript, React, Node.js, IA, junior, full stack"
     />
     <meta name="robots" content="index, follow" />
-    <title>Benita Plata · Web Developer & AI Automation</title>
+    <title>Benita Plata · Frontend Developer React</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,7 +40,7 @@
         --border: rgba(255, 255, 255, 0.06);
         --border-hover: rgba(216, 131, 166, 0.3);
         --text: #e8e8e8;
-        --text-dim: #888;
+        --text-dim: #c2bcc0;
         --accent: #d883a6;
         --accent-soft: #e8a4be;
         --accent-glow: rgba(216, 131, 166, 0.12);
@@ -595,6 +595,10 @@
         max-width: 580px;
         margin-bottom: 3rem;
       }
+      .skills-subtitle {
+        max-width: 640px;
+        white-space: nowrap;
+      }
 
       .section-divider {
         border-top: 1px solid var(--border);
@@ -602,32 +606,39 @@
 
       /* ===== ABOUT ===== */
       .about-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
+        display: block;
+      }
+      .about-text {
+        position: relative;
+      }
+      .about-text::before {
+        content: "";
+        position: absolute;
+        inset: -28px;
+        border-radius: 24px;
+        pointer-events: none;
+        offset-path: border-box;
+        animation: text-orbit-travel 18s linear infinite;
+        background: radial-gradient(
+          circle 7px at 0 0,
+          rgba(232, 164, 190, 0.5) 0%,
+          rgba(216, 131, 166, 0.22) 55%,
+          transparent 75%
+        );
+      }
+      @keyframes text-orbit-travel {
+        to {
+          offset-distance: 100%;
+        }
       }
       .about-text p {
         color: var(--text-dim);
-        margin-bottom: 1.2rem;
-        font-size: 0.96rem;
+        margin-bottom: 1.4rem;
+        font-size: 1.02rem;
       }
       .about-text strong {
         color: var(--text);
         font-weight: 500;
-      }
-
-      .about-photo {
-        border-radius: 20px;
-        overflow: hidden;
-        border: 1px solid var(--border);
-        max-width: 380px;
-        justify-self: center;
-      }
-      .about-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
       }
 
       /* ===== TIMELINE ===== */
@@ -748,7 +759,8 @@
       /* ===== SKILLS ===== */
       .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
         gap: 1.2rem;
       }
       .skill-card {
@@ -756,6 +768,7 @@
         border: 1px solid var(--border);
         border-radius: var(--radius);
         padding: 1.6rem;
+        height: 300px;
         transition: all 0.4s var(--transition);
         position: relative;
         overflow: hidden;
@@ -817,7 +830,7 @@
       /* ===== PROJECTS ===== */
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         gap: 1.8rem;
       }
       .project-card {
@@ -1153,17 +1166,16 @@
           width: 220px;
           height: 280px;
         }
-        .about-grid {
-          grid-template-columns: 1fr;
-        }
-        .about-photo {
-          max-width: 300px;
-          margin: 0 auto;
+        .about-text::before {
+          display: none;
         }
         .contact-grid {
           grid-template-columns: 1fr;
         }
         .projects-grid {
+          grid-template-columns: 1fr;
+        }
+        .skills-grid {
           grid-template-columns: 1fr;
         }
         .footer-inner {
@@ -1193,6 +1205,9 @@
         }
         .menu-toggle {
           display: block;
+        }
+        .skills-subtitle {
+          white-space: normal;
         }
         section {
           padding: 4rem 1.2rem;
@@ -1260,14 +1275,13 @@
           <div class="hero-badge reveal">Abierta a oportunidades</div>
           <h1 class="reveal reveal-d1">
             <span class="line">Soy <span class="accent">Benita</span>,</span>
-            <span class="line">web developer</span>
-            <span class="line">&amp; AI automation</span>
+            <span class="line">frontend developer</span>
+            <span class="line">&middot; React</span>
           </h1>
           <p class="hero-desc reveal reveal-d2">
-            Construyo webs, lanzo tiendas online y automatizo procesos con IA
-            para que las empresas trabajen mejor. He eliminado tareas manuales,
-            conectado usuarios reales y puesto proyectos en producción que
-            siguen funcionando.
+            Construyo interfaces con criterio de diseño y de negocio, e
+            integro IA en producto. Tengo webs y tiendas para clientes
+            reales, en producción y funcionando.
           </p>
           <div class="hero-ctas reveal reveal-d3">
             <a href="#proyectos" class="btn btn-primary">Ver proyectos ↓</a>
@@ -1298,19 +1312,21 @@
         <span class="marquee-item"
           >HTML5 <span class="dot">·</span> CSS3
           <span class="dot">·</span> JavaScript <span class="dot">·</span> React
-          <span class="dot">·</span> Node.js <span class="dot">·</span> Python
-          <span class="dot">·</span> Java <span class="dot">·</span> SQL
-          <span class="dot">·</span> MongoDB <span class="dot">·</span> Git
-          <span class="dot">·</span> Docker <span class="dot">·</span> Figma <span class="dot">·</span> IA
+          <span class="dot">·</span> Node.js
+          <span class="dot">·</span> MongoDB <span class="dot">·</span> MySQL
+          <span class="dot">·</span> Git <span class="dot">·</span> Figma
+          <span class="dot">·</span> n8n <span class="dot">·</span> WordPress
+          <span class="dot">·</span> IA
           Generativa</span
         >
         <span class="marquee-item"
           >HTML5 <span class="dot">·</span> CSS3
           <span class="dot">·</span> JavaScript <span class="dot">·</span> React
-          <span class="dot">·</span> Node.js <span class="dot">·</span> Python
-          <span class="dot">·</span> Java <span class="dot">·</span> SQL
-          <span class="dot">·</span> MongoDB <span class="dot">·</span> Git
-          <span class="dot">·</span> Docker <span class="dot">·</span> Figma <span class="dot">·</span> IA
+          <span class="dot">·</span> Node.js
+          <span class="dot">·</span> MongoDB <span class="dot">·</span> MySQL
+          <span class="dot">·</span> Git <span class="dot">·</span> Figma
+          <span class="dot">·</span> n8n <span class="dot">·</span> WordPress
+          <span class="dot">·</span> IA
           Generativa</span
         >
       </div>
@@ -1344,12 +1360,6 @@
               concretas</strong>, no el que queda bonito en el repositorio.
             </p>
           </div>
-          <div class="about-photo reveal reveal-d2">
-            <img
-              src="imágenes/curriculum.webp"
-              alt="Benita Plata — foto profesional"
-            />
-          </div>
         </div>
       </div>
     </section>
@@ -1374,6 +1384,18 @@
             <div class="timeline-grid">
               <div class="timeline-item tech-highlight reveal">
                 <div class="timeline-badge">Experiencia técnica</div>
+                <div class="timeline-date">2026 — Actualidad</div>
+                <div class="timeline-role">Desarrolladora Web Freelance</div>
+                <div class="timeline-desc">
+                  Desarrollo y entrega de proyectos web para clientes reales de
+                  principio a fin: análisis de necesidades, desarrollo,
+                  despliegue y soporte. Incluye un ecommerce en
+                  WordPress/WooCommerce y dos portfolios en React, todos en
+                  producción.
+                </div>
+              </div>
+              <div class="timeline-item tech-highlight reveal">
+                <div class="timeline-badge">Prácticas</div>
                 <div class="timeline-date">Feb 2026 — Jun 2026</div>
                 <div class="timeline-role">Junior Web Developer & AI Automation</div>
                 <div class="timeline-place">VA360 Labs</div>
@@ -1382,18 +1404,6 @@
                   manuales. Integración de IA en workflows y procesos digitales.
                   Optimización de entornos WordPress y documentación técnica.
                   Desarrollo frontend de proyectos web desde cero.
-                </div>
-              </div>
-              <div class="timeline-item tech-highlight reveal">
-                <div class="timeline-badge">Experiencia técnica</div>
-                <div class="timeline-date">2026</div>
-                <div class="timeline-role">Web Developer — WordPress e-commerce</div>
-                <div class="timeline-place">Proyecto para cliente real</div>
-                <div class="timeline-desc">
-                  Desarrollo y puesta en producción de tienda online en WordPress.
-                  Análisis de necesidades del cliente y propuesta de mejoras UX.
-                  Personalización de catálogo, procesos de compra y SEO básico.
-                  Coordinación directa con cliente durante todo el proyecto.
                 </div>
               </div>
               <div class="timeline-item prev-exp reveal">
@@ -1470,7 +1480,7 @@
         <h2 class="section-title reveal reveal-d1">
           Tecnologías y herramientas
         </h2>
-        <p class="section-subtitle reveal reveal-d2">
+        <p class="section-subtitle skills-subtitle reveal reveal-d2">
           Con las que desarrollo aplicaciones eficientes, seguras y escalables.
         </p>
 
@@ -1499,7 +1509,6 @@
             <div class="skill-tags">
               <span class="skill-tag">Node.js</span>
               <span class="skill-tag">Express.js</span>
-              <span class="skill-tag">Python</span>
               <span class="skill-tag">APIs REST</span>
               <span class="skill-tag">JWT</span>
             </div>
@@ -1513,6 +1522,7 @@
             <div class="skill-tags">
               <span class="skill-tag">MySQL</span>
               <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">MongoDB Compass</span>
             </div>
           </div>
 
@@ -1523,9 +1533,6 @@
             <h3 class="skill-cat-title">Herramientas</h3>
             <div class="skill-tags">
               <span class="skill-tag">Git & GitHub</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">CI/CD</span>
-              <span class="skill-tag">AWS</span>
               <span class="skill-tag">Figma</span>
               <span class="skill-tag">WordPress</span>
               <span class="skill-tag">VS Code</span>
@@ -1586,7 +1593,7 @@
           <span class="project-tag">Proyecto real para cliente</span>
           <h3 class="project-title">Padang Padang Costura</h3>
           <p class="project-desc">
-            Ecommerce completo en WordPress + WooCommerce para una marca de costura artesanal. Partí de un análisis de la web existente, propuse una solución estructurada y la ejecuté: identidad visual coherente, personalización de productos, checkout con Stripe, SEO y páginas legales. Coordinación directa con el cliente durante todo el proyecto.
+            Ecommerce en WordPress + WooCommerce para una marca de costura artesanal: identidad visual, checkout con Stripe y SEO. Coordinación directa con el cliente.
           </p>
           <div class="project-tech">
             <span>WordPress</span><span>WooCommerce</span><span>Elementor</span>
@@ -1594,6 +1601,33 @@
           </div>
           <div class="project-links">
             <a href="https://padangcostura.es" target="_blank">
+              Ver proyecto →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEUS ESTANY PORTFOLIO -->
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <img
+            src="imágenes/portfolio_neus.webp"
+            alt="Neus Estany · Portfolio de artista"
+          />
+          <div class="project-thumb-overlay"></div>
+        </div>
+        <div class="project-info">
+          <span class="project-tag">Proyecto real para cliente</span>
+          <h3 class="project-title">Neus Estany · Portfolio de artista</h3>
+          <p class="project-desc">
+            Portfolio en React y Vite para una artista visual: galería masonry, imágenes optimizadas (-93% de peso), zona de archivo protegida y contacto.
+          </p>
+          <div class="project-tech">
+            <span>React</span><span>Vite</span><span>React Router</span>
+            <span>CSS Modules</span>
+          </div>
+          <div class="project-links">
+            <a href="https://www.neusestany.com" target="_blank">
               Ver proyecto →
             </a>
           </div>
@@ -1613,13 +1647,7 @@
           <span class="project-tag">TFG · Fan&Roll</span>
           <h3 class="project-title">Fan&Roll · Plataforma MERN para artistas y fans</h3>
           <p class="project-desc">
-            Proyecto final de grado y mi desarrollo más completo hasta ahora:
-            una plataforma full stack para conectar artistas con comunidades de
-            fans. Incluye autenticación JWT, perfiles de artista, publicación
-            de obras, creación de Fan Clubs, API REST, arquitectura MERN y
-            despliegue real con Docker y MongoDB. Desarrollado junto a una
-            compañera, con trabajo colaborativo desde la planificación técnica
-            hasta la implementación de funcionalidades clave.
+            Plataforma full stack MERN para conectar artistas y fans: autenticación JWT, perfiles, Fan Clubs y despliegue con Docker. Proyecto final de grado en equipo.
           </p>
           <div class="project-tech">
             <span>React</span><span>Node.js</span><span>Express</span>
@@ -1647,10 +1675,7 @@
           <span class="project-tag">TFM · Full Stack + IA</span>
           <h3 class="project-title">JobFinder</h3>
           <p class="project-desc">
-            Plataforma de empleo tech con IA para análisis de CV,
-            comparación automática CV-oferta y recomendaciones
-            personalizadas. Incluye geolocalización, autenticación con roles
-            y panel admin.
+            Plataforma de empleo con IA: análisis de CV, matching automático CV-oferta y recomendaciones personalizadas.
           </p>
           <div class="project-tech">
             <span>React</span><span>Node.js</span><span>Express</span>
@@ -1681,9 +1706,7 @@
           <span class="project-tag">IA · Automatización · RAG</span>
           <h3 class="project-title">CourseMind AI</h3>
           <p class="project-desc">
-            Sistema que transforma clases grabadas en conocimiento estructurado con IA.
-            Genera automáticamente material educativo (resúmenes, preguntas, contenido reutilizable)
-            y crea un tutor IA capaz de responder preguntas sobre el curso utilizando RAG.
+            Convierte clases grabadas en material educativo con IA y ofrece un tutor RAG para resolver dudas del curso.
           </p>
           <div class="project-tech">
             <span>Next.js</span><span>TypeScript</span>
@@ -1705,7 +1728,7 @@
       <div class="project-card reveal reveal-d2">
         <div class="project-thumb">
           <img
-            src="imágenes/portfolio.webp"
+            src="imágenes/portfolio_raul.webp"
             alt="Optimización de CV y portfolio docente — caso real"
           />
           <div class="project-thumb-overlay"></div>
@@ -1714,9 +1737,7 @@
           <span class="project-tag">Consultoría · Personal Branding</span>
           <h3 class="project-title">Optimización de CV y portfolio docente</h3>
           <p class="project-desc">
-            Rediseño completo del CV y portfolio de un docente con más de 15 años de experiencia,
-            enfocado en mejorar su posicionamiento en procesos de selección de centros educativos.
-            Trabajo centrado en estructura, narrativa profesional y claridad para recruiters.
+            Rediseño de CV y portfolio de un docente con 15+ años de experiencia, enfocado en estructura y narrativa para procesos de selección.
           </p>
           <div class="project-tech">
             <span>Problema: CV poco optimizado</span>
@@ -1736,7 +1757,7 @@
       <div class="project-card reveal reveal-d1">
         <div class="project-thumb">
           <img
-            src="imágenes/antes-despues.webp"
+            src="imágenes/showcase.webp"
             alt="Showcase CSS — efectos visuales"
           />
           <div class="project-thumb-overlay"></div>
@@ -1768,7 +1789,7 @@
       <div class="project-card reveal reveal-d2">
         <div class="project-thumb">
           <img
-            src="imágenes/burbujas.webp"
+            src="imágenes/bubblease.webp"
             alt="BubblEase — app interactiva React"
           />
           <div class="project-thumb-overlay"></div>
